@@ -35,34 +35,14 @@ class usuariosController extends Controller{
         $model->escola = $request->input('escola');
         $model->serie = $request->input('serie');
         $model->situacao = "Ativo";
-        $model->progresso = 0;
+        $model->progressonumeros = 0;
+        $model->progressoletras = 0;
     
         // Guardar os dados no banco
         $model->save();
     
         return redirect('usuarioCadastro')->with('success', 'Usuário cadastrado com sucesso!');
     }//fim  
-    
-    
-    public function consultar(){
-        $ids = usuariosModel::all();
-        return view('paginas.consultar', compact('ids'));
-    }//fim do consultar
-    
-    public function editar($id){
-        $dado = usuariosModel::findOrFail($id);
-        return view('paginas.editar', compact('dado'));
-    }//fim do editar
-
-    public function atualizar(Request $request, $id){
-        usuariosModel::where('id',$id)->update($request->all());
-        return redirect('/consultar');
-    }//fim do atualizar
-
-    public function excluir(Request $request,$id){
-        usuariosModel::where('id',$id)->delete($request->all());
-        return redirect('/consultar');
-    }
 
     // Processa o login manualmente
     public function usuariosLogin(Request $request){
@@ -123,7 +103,6 @@ class usuariosController extends Controller{
             'idade' => 'required|string',
             'escola' => 'required|string',
             'serie' => 'required|string',
-            'perfil' => 'required|string',
         ]);
 
         // Recupera os dados do funcionário da sessão
@@ -138,7 +117,6 @@ class usuariosController extends Controller{
             'idade' => $request->idade,
             'escola' => $request->escola,
             'serie' => $request->serie,
-            'perfil' => $request->perfil,
         ]);
 
         // Atualiza a sessão com os novos dados do funcionário
@@ -148,7 +126,7 @@ class usuariosController extends Controller{
         return redirect()->route('usuarioperfil');
     }
 
-    public function usuarioProgresso(){
+    public function usuarioAumentarProgressoNumeros(){
             $usuarioSessao = session('usuarios');
         
             if (!$usuarioSessao) {
@@ -163,26 +141,16 @@ class usuariosController extends Controller{
             }
         
             // Atualiza progresso
-            $usuario->progresso = min($usuario->progresso + 10, 100);
+            $usuario->progressonumeros = min($usuario->progressonumeros + 9.09, 100);
             $usuario->save();
         
             // Atualiza a sessão também, se quiser manter o progresso atualizado nela
             session(['usuarios' => $usuario]);
         
-            return back()->with('success', 'Progresso atualizado!');
+            return redirect('usuarioNumeros');
     }
 
-    public function usuarioPerfil2(){
-        // Verifica se o funcionário está logado na sessão
-        if (!session()->has('usuarios')) {
-            return redirect()->route('usuarioPerfil'); // Redireciona se não estiver logado
-        }
-        
-        $usuarios = session('usuarios'); // Recupera os dados do funcionário da sessão
-        return view('paginas.Numeros.numero0', compact('usuarios')); // Passa os dados para a view
-    }
-
-    public function usuarioRelatorio(){
+    public function usuarioRelatorioNumeros(){
         // Verifica se o funcionário está logado na sessão
         if (!session()->has('usuarios')) {
             return redirect()->route('usuarioPerfil'); // Redireciona se não estiver logado
@@ -192,5 +160,29 @@ class usuariosController extends Controller{
         return view('paginas.usuarioRelatorio', compact('usuarios')); // Passa os dados para a view
     }
 
+
+    public function usuarioAumentarProgressoLetras(){
+        $usuarioSessao = session('usuarios');
+    
+        if (!$usuarioSessao) {
+            return redirect()->back()->with('error', 'Usuário não autenticado.');
+        }
+    
+        // Recarrega o usuário do banco, caso tenha mudado
+        $usuario = usuariosModel::find($usuarioSessao->id);
+    
+        if (!$usuario) {
+            return redirect()->back()->with('error', 'Usuário não encontrado.');
+        }
+    
+        // Atualiza progresso
+        $usuario->progressoletras = min($usuario->progressoletras + 3.846153846153846, 100);
+        $usuario->save();
+    
+        // Atualiza a sessão também, se quiser manter o progresso atualizado nela
+        session(['usuarios' => $usuario]);
+    
+        return redirect('usuarioAlfabeto');
+    }
 
 }//fim da classe

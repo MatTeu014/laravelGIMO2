@@ -21,7 +21,8 @@ return new class extends Migration
             $table->longtext('escola');
             $table->longtext('serie');
             $table->longtext('situacao');
-            $table->integer('progresso');
+            $table->integer('progressonumeros');
+            $table->integer('progressoletras');
             $table->timestamps();
         });
     }

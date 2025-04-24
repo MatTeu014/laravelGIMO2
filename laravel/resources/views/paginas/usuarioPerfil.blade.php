@@ -23,7 +23,7 @@
                style="background-color: #E5CD59; border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioRelatorio" class="btn btn-danger"
+            <a href="{{ route('usuariorelatorionumeros') }}" class="btn btn-danger"
                style="background-color: #E5CD59; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
