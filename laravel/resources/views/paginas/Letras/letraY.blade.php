@@ -20,7 +20,7 @@
             <a href="/usuarioAtividades" class="btn btn-danger" style="background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioRelatorio" class="btn btn-danger" style="background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
+            <a href="{{ route('usuariorelatorio') }}" class="btn btn-danger" style="background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
       </div>
@@ -39,7 +39,7 @@
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                 </svg>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/usuarioPerfil">Perfil</a></li>
+                  <li><a class="dropdown-item" href="{{ route('usuarioperfil') }}">Perfil</a></li>
                   <li><a class="dropdown-item" href="/">Sair</a></li>
                 </ul>
               </li>
@@ -77,9 +77,11 @@
             <img src="{{URL::to('/assets/img/letraY_4.png')}}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
+        <form method="post" action="{{ route('usuarioaumentarprogressoletray') }}">
+        @csrf
         <div style="position: relative;">
             <img src="{{ URL::to('/assets/img/finalY.png') }}" class="d-block w-100" alt="...">
-            <button style="
+            <button @if(session('usuarios')->botaoY) disabled @endif type="submit" style="
                 background-color: #4782DA;
                 border: 2px solid black;
                 border-radius: 30px;
@@ -94,6 +96,7 @@
                 Finalizar
             </button>
         </div>
+        </form>
     </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">

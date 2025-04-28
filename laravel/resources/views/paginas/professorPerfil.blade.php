@@ -1,5 +1,5 @@
 <x-layout titulo="Perfil do Professor">    
-  <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #BDBDBD; padding-top: 20px; padding-bottom: 20px;">
+  <nav class="navbar navbar-expand-lg sticky-top" style="background-color: rgb(245, 101, 58); padding-top: 20px; padding-bottom: 20px;">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
       <!-- LOGO (Imagem responsiva) -->
@@ -27,8 +27,7 @@
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
               </svg>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="admPerfil">Perfil</a></li>
-                <li><a class="dropdown-item" href="admCadastro">Cadastrar</a></li>
+                <li><a class="dropdown-item" href="professorperfil">Perfil</a></li>
                 <li><a class="dropdown-item" href="/">Sair</a></li>
               </ul>
             </li>
@@ -54,7 +53,7 @@
             <div class="col-md-6">
               <h3 style="text-align: center;">Nome:</h3>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $adms->nome }}">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->nome }}">
                 <label for="nome">Nome</label>
               </div>
             </div>
@@ -63,7 +62,7 @@
             <div class="col-md-6">
               <h3 style="text-align: center;">Sobrenome:</h3>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $adms->sobrenome }}">
+                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->sobrenome }}">
                 <label for="sobrenome">Sobrenome</label>
               </div>
             </div>
@@ -72,7 +71,7 @@
             <div class="col-md-6">
               <h3 style="text-align: center;">E-mail:</h3>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $adms->email }}">
+                <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->email }}">
                 <label for="email">E-mail</label>
               </div>
             </div>
@@ -81,7 +80,7 @@
             <div class="col-md-6">
               <h3 style="text-align: center;">Senha:</h3>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="senha" name="senha" placeholder="Senha" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $adms->senha }}">
+                <input type="text" class="form-control" id="senha" name="senha" placeholder="Senha" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->senha }}">
                 <label for="senha">Senha</label>
               </div>
             </div>
@@ -90,7 +89,7 @@
             <div class="col-md-6">
               <h3 style="text-align: center;">Idade:</h3>
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="idade" name="idade" placeholder="Idade" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $adms->idade}} Anos">
+                <input type="text" class="form-control" id="idade" name="idade" placeholder="Idade" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->idade}} Anos">
                 <label for="idade">Idade</label>
               </div>
             </div>
@@ -100,7 +99,7 @@
               <a href="professorHome"><button type="button"  style="width: 100%; border-radius: 30px; font-size: 18px; padding: 12px 24px; backgorund-color:black;">
                 Voltar
               </button></a>
-              <a href="{{ route('professorseditar') }}"><button type="button"  style="width: 100%; border-radius: 30px; font-size: 18px; padding: 12px 24px; margin-left: 20%;backgorund-color:black;">
+              <a href="{{ route('professoreditar2') }}"><button type="button"  style="width: 100%; border-radius: 30px; font-size: 18px; padding: 12px 24px; margin-left: 20%;backgorund-color:black;">
                 Editar
               </button></a>
             </div>

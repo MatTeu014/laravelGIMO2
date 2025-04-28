@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class usuariosModel extends Model
+class professorModel extends Model
 {
     //Defino o banco de dados que será usado
     use HasFactory;

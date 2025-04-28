@@ -20,7 +20,7 @@
             <a href="usuarioAtividades" class="btn btn-danger" style="border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('usuariorelatorionumeros') }}" class="btn btn-danger" style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
+            <a href="{{ route('usuariorelatorio') }}" class="btn btn-danger" style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
       </div>
@@ -52,7 +52,12 @@
 
   <!-- Seção de Conteúdo -->
 
-   <div style="text-align: center; margin-top: 2%;"><h1>Escolha uma Atividade</h1></div>
+   <div style="text-align: center; margin-top: 2%;"><h1>Escolha uma Atividade</h1>
+        <p>Você agora está entrando na área de atividades, fique atento nos passos a passo da execução das letras e números,<br> 
+          siga as orientações de cada passo, sempre prestando muita atenção, e assim que acabar cada letra ou número <br> 
+          não esqueça de clicar no botão <b>FINALIZAR</b> de cada atividade, para computar seu rendimento. <br>
+          Boa sorte, e tomara que se divirta bastante, enquanto aprende!</p>
+    </div>
 
     <section class="py-5" style="padding-top: 80px; text-align: center;">
         <div class="container" style="margin: auto;">
@@ -60,7 +65,7 @@
 
                 <div class="card" style="width: 24rem; margin-left: 10%; height: 35vh; border-color: white;">
                     <div class="card-body">
-                      <a href="usuarioAlfabeto"><button style="font-size: 150px; border-radius: 30px; border-color: #4782da; border-style: solid; background-color: white;">ABC</button></a>
+                        <a href="usuarioAlfabeto"><button style="font-size: 150px; border-radius: 30px; border-color: #4782da; border-style: solid; background-color: white;">ABC</button></a>
                     </div>
                 </div>
                 

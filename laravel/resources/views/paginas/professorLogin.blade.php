@@ -10,7 +10,7 @@
 
         <!-- BOTÕES DIREITA (USUÁRIO E ADM COM LINKS) -->
         <form class="d-flex" role="search">
-            <a href="professorCadastro" class="btn ms-2" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 18px; font-size: 20px; width: 150px; text-align: center; color:rgb(245, 140, 109);">CADASTRO</a>
+            <a class="btn ms-2" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 18px; font-size: 20px; width: 150px; text-align: center; color:rgb(245, 140, 109);">LOGIN</a>
         </form>
 
     </div>

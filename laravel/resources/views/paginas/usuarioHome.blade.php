@@ -20,7 +20,7 @@
             <a href="/usuarioAtividades" class="btn btn-danger" style="border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('usuariorelatorionumeros') }}" class="btn btn-danger" style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
+            <a href="{{ route('usuariorelatorio') }}" class="btn btn-danger" style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
       </div>
@@ -64,7 +64,7 @@
 
         <!-- Imagem à direita -->
         <div class="col-md-6 text-center">
-          <img src="https://via.placeholder.com/500x300" alt="Imagem ilustrativa" class="img-fluid rounded">
+          <img src="{{URL::to('/assets/img/img_home.png')}}" alt="Imagem ilustrativa" class="img-fluid rounded">
         </div>
 
       </div>

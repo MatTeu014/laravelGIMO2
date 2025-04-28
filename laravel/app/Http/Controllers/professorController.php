@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\professorModel;
+use App\Models\usuariosModel;
 
 class professorController extends Controller{
     
@@ -28,7 +29,7 @@ class professorController extends Controller{
         $model = new professorModel();
         $model->nome = $request->input('nome');
         $model->sobrenome = $request->input('sobrenome');
-        $model->email = $email;
+        $model->email = $request->input('email');
         $model->senha = $request->input('senha');
         $model->idade = $request->input('idade');
         $model->situacao = "Ativo";
@@ -36,7 +37,7 @@ class professorController extends Controller{
         // Guardar os dados no banco
         $model->save();
     
-        return redirect('professorCadastro')->with('success', 'Administrador cadastrado com sucesso!');
+        return redirect('professorCadastro')->with('success', 'Professor cadastrado com sucesso!');
     }
 
     public function professorLogin(Request $request){
@@ -47,32 +48,32 @@ class professorController extends Controller{
      
         
         // Verificar se o funcionário existe e a senha está correta
-        if ($adms=professorModel::where('email', $email)->where('senha', $senha)->first()) {
+        if ($professores=professorModel::where('email', $email)->where('senha', $senha)->first()) {
     
             // Armazenar os dados do funcionário na sessão
             session(['professores' => $professores]);
     
             // Redirecionar para a página homeLogado
-            return redirect('professoresHome');
+            return redirect('professorHome');
         } else {
             // Login falhou
-            return redirect('professoresLogin')->with('failed', 'E-mail ou senha inválido');
+            return redirect('professorLogin')->with('failed', 'E-mail ou senha inválido');
         }
 
     }
 
-    public function professoresPerfil(){
+    public function professorPerfil(){
         // Verifica se o funcionário está logado na sessão
         if (!session()->has('professores')) {
             return redirect()->route('professoresPerfil'); // Redireciona se não estiver logado
         }
         
-        $adms = session('professores'); // Recupera os dados do funcionário da sessão
-        return view('paginas.professoresPerfil', compact('professores')); // Passa os dados para a view
+        $professores = session('professores'); // Recupera os dados do funcionário da sessão
+        return view('paginas.professorPerfil', compact('professores')); // Passa os dados para a view
     }
 
     
-    public function professoresEditar2(){
+    public function professorEditar2(){
         // Verifica se o funcionário está logado na sessão
         if (!session()->has('professores')) {
         }
@@ -81,10 +82,10 @@ class professorController extends Controller{
         $professores = session('professores');
 
         // Exibe o formulário de edição, passando os dados do funcionário
-        return view('paginas.professoresEditarPerfil', compact('professores'));
+        return view('paginas.professorEditarPerfil', compact('professores'));
     }
 
-    public function professoresAtualizar2(Request $request){
+    public function professorAtualizar2(Request $request){
         // Verifica se o funcionário está logado na sessão
         if (!session()->has('professores')) {
 
@@ -116,6 +117,21 @@ class professorController extends Controller{
 
         // Redireciona para a página de homeLogado ou outra página que desejar
         return redirect('professoresperfil');
+    }
+
+    public function professorTurmas(Request $request){
+        // Verifica se o funcionário está logado na sessão
+        if (!session()->has('professores')) {
+        }
+        
+
+        $valor = $request->input('turma');
+
+        $turmas = usuariosModel::where('turma',$valor)->get();
+
+
+        // Exibe o formulário de edição, passando os dados do funcionário
+        return view('paginas.professorSeries', compact('turmas'));
     }
 
 }//fim da classe

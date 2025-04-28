@@ -136,7 +136,13 @@ Route::get('professorEditarPerfil', function () {
     return view('paginas.professorEditarPerfil');
 });
 
+Route::get('professorSerie1', function () {
+    return view('paginas.professorSerie1');
+});
 
+Route::get('professorSerie2', function () {
+    return view('paginas.professorSerie2');
+});
 
 //Letras
 Route::get('letraA', function () {
@@ -304,15 +310,66 @@ Route::get('/usuarioperfil', [App\Http\Controllers\usuariosController::class, 'u
 
 Route::get('/usuarioeditar', [App\Http\Controllers\usuariosController::class, 'usuarioEditar'])->name('usuarioeditar');
 
-Route::post('/usuarioatualizar', [usuariosController::class, 'usuarioAtualizar'])->name('usuarioatualizar');
-
-Route::post('/usuariodesativar', [usuariosController::class, 'usuarioDesativar'])->name('usuariodesativar');
+Route::post('/usuarioatualizar', [App\Http\Controllers\usuariosController::class, 'usuarioAtualizar'])->name('usuarioatualizar');
 
 Route::post('/usuarioaumentarprogressonumeros', [usuariosController::class, 'usuarioAumentarProgressoNumeros'])->name('usuarioaumentarprogressonumeros');
 
-Route::get('/usuariorelatorionumeros', [App\Http\Controllers\usuariosController::class, 'usuarioRelatorioNumeros'])->name('usuariorelatorionumeros');
+Route::get('/usuariorelatorio', [App\Http\Controllers\usuariosController::class, 'usuarioRelatorio'])->name('usuariorelatorio');
 
-Route::post('/usuarioaumentarprogressoletras', [usuariosController::class, 'usuarioAumentarProgressoLetras'])->name('usuarioaumentarprogressoletras');
+#######BOTOES DO ALFABETO########
+
+Route::post('/usuarioaumentarprogressoletraa', [usuariosController::class, 'usuarioAumentarProgressoLetraA'])->name('usuarioaumentarprogressoletraa');
+Route::post('/usuarioaumentarprogressoletrab', [usuariosController::class, 'usuarioAumentarProgressoLetraB'])->name('usuarioaumentarprogressoletrab');
+Route::post('/usuarioaumentarprogressoletrac', [usuariosController::class, 'usuarioAumentarProgressoLetraC'])->name('usuarioaumentarprogressoletrac');
+Route::post('/usuarioaumentarprogressoletrad', [usuariosController::class, 'usuarioAumentarProgressoLetraD'])->name('usuarioaumentarprogressoletrad');
+Route::post('/usuarioaumentarprogressoletrae', [usuariosController::class, 'usuarioAumentarProgressoLetraE'])->name('usuarioaumentarprogressoletrae');
+Route::post('/usuarioaumentarprogressoletraf', [usuariosController::class, 'usuarioAumentarProgressoLetraF'])->name('usuarioaumentarprogressoletraf');
+Route::post('/usuarioaumentarprogressoletrag', [usuariosController::class, 'usuarioAumentarProgressoLetraG'])->name('usuarioaumentarprogressoletrag');
+Route::post('/usuarioaumentarprogressoletrah', [usuariosController::class, 'usuarioAumentarProgressoLetraH'])->name('usuarioaumentarprogressoletrah');
+Route::post('/usuarioaumentarprogressoletrai', [usuariosController::class, 'usuarioAumentarProgressoLetraI'])->name('usuarioaumentarprogressoletrai');
+Route::post('/usuarioaumentarprogressoletraj', [usuariosController::class, 'usuarioAumentarProgressoLetraJ'])->name('usuarioaumentarprogressoletraj');
+Route::post('/usuarioaumentarprogressoletrak', [usuariosController::class, 'usuarioAumentarProgressoLetraK'])->name('usuarioaumentarprogressoletrak');
+Route::post('/usuarioaumentarprogressoletral', [usuariosController::class, 'usuarioAumentarProgressoLetraL'])->name('usuarioaumentarprogressoletral');
+Route::post('/usuarioaumentarprogressoletram', [usuariosController::class, 'usuarioAumentarProgressoLetraM'])->name('usuarioaumentarprogressoletram');
+Route::post('/usuarioaumentarprogressoletran', [usuariosController::class, 'usuarioAumentarProgressoLetraN'])->name('usuarioaumentarprogressoletran');
+Route::post('/usuarioaumentarprogressoletrao', [usuariosController::class, 'usuarioAumentarProgressoLetraO'])->name('usuarioaumentarprogressoletrao');
+Route::post('/usuarioaumentarprogressoletrap', [usuariosController::class, 'usuarioAumentarProgressoLetraP'])->name('usuarioaumentarprogressoletrap');
+Route::post('/usuarioaumentarprogressoletraq', [usuariosController::class, 'usuarioAumentarProgressoLetraQ'])->name('usuarioaumentarprogressoletraq');
+Route::post('/usuarioaumentarprogressoletrar', [usuariosController::class, 'usuarioAumentarProgressoLetraR'])->name('usuarioaumentarprogressoletrar');
+Route::post('/usuarioaumentarprogressoletras', [usuariosController::class, 'usuarioAumentarProgressoLetraS'])->name('usuarioaumentarprogressoletras');
+Route::post('/usuarioaumentarprogressoletrat', [usuariosController::class, 'usuarioAumentarProgressoLetraT'])->name('usuarioaumentarprogressoletrat');
+Route::post('/usuarioaumentarprogressoletrau', [usuariosController::class, 'usuarioAumentarProgressoLetraU'])->name('usuarioaumentarprogressoletrau');
+Route::post('/usuarioaumentarprogressoletrav', [usuariosController::class, 'usuarioAumentarProgressoLetraV'])->name('usuarioaumentarprogressoletrav');
+Route::post('/usuarioaumentarprogressoletraw', [usuariosController::class, 'usuarioAumentarProgressoLetraW'])->name('usuarioaumentarprogressoletraw');
+Route::post('/usuarioaumentarprogressoletrax', [usuariosController::class, 'usuarioAumentarProgressoLetraX'])->name('usuarioaumentarprogressoletrax');
+Route::post('/usuarioaumentarprogressoletray', [usuariosController::class, 'usuarioAumentarProgressoLetraY'])->name('usuarioaumentarprogressoletray');
+Route::post('/usuarioaumentarprogressoletraz', [usuariosController::class, 'usuarioAumentarProgressoLetraZ'])->name('usuarioaumentarprogressoletraz');
+
+Route::post('/usuarioresetarprogressoletras', [usuariosController::class, 'usuarioResetarProgressoLetras'])->name('usuarioresetarprogressoletras');
+
+#######BOTOES DO ALFABETO########
+
+
+#######BOTOES DOS NUMEROS########
+
+Route::post('/usuarioaumentarprogressonumero0', [usuariosController::class, 'usuarioAumentarProgressoNumero0'])->name('usuarioaumentarprogressonumero0');
+Route::post('/usuarioaumentarprogressonumero1', [usuariosController::class, 'usuarioAumentarProgressoNumero1'])->name('usuarioaumentarprogressonumero1');
+Route::post('/usuarioaumentarprogressonumero2', [usuariosController::class, 'usuarioAumentarProgressoNumero2'])->name('usuarioaumentarprogressonumero2');
+Route::post('/usuarioaumentarprogressonumero3', [usuariosController::class, 'usuarioAumentarProgressoNumero3'])->name('usuarioaumentarprogressonumero3');
+Route::post('/usuarioaumentarprogressonumero4', [usuariosController::class, 'usuarioAumentarProgressoNumero4'])->name('usuarioaumentarprogressonumero4');
+Route::post('/usuarioaumentarprogressonumero5', [usuariosController::class, 'usuarioAumentarProgressoNumero5'])->name('usuarioaumentarprogressonumero5');
+Route::post('/usuarioaumentarprogressonumero6', [usuariosController::class, 'usuarioAumentarProgressoNumero6'])->name('usuarioaumentarprogressonumero6');
+Route::post('/usuarioaumentarprogressonumero7', [usuariosController::class, 'usuarioAumentarProgressoNumero7'])->name('usuarioaumentarprogressonumero7');
+Route::post('/usuarioaumentarprogressonumero8', [usuariosController::class, 'usuarioAumentarProgressoNumero8'])->name('usuarioaumentarprogressonumero8');
+Route::post('/usuarioaumentarprogressonumero9', [usuariosController::class, 'usuarioAumentarProgressoNumero9'])->name('usuarioaumentarprogressonumero9');
+Route::post('/usuarioaumentarprogressonumero10', [usuariosController::class, 'usuarioAumentarProgressoNumero10'])->name('usuarioaumentarprogressonumero10');
+
+
+
+Route::post('/usuarioresetarprogressonumeros', [usuariosController::class, 'usuarioResetarProgressoNumeros'])->name('usuarioresetarprogressonumeros');
+
+#######BOTOES DOS NUMEROS########
+
 
 
 //Funções Adms
@@ -326,3 +383,18 @@ Route::get('/admsperfil', [admsController::class, 'admsPerfil'])->name('admsPerf
 Route::get('/admseditar', [App\Http\Controllers\admsController::class, 'admsEditar2'])->name('admseditar');
 
 Route::post('/admsatualizar', [admsController::class, 'admsAtualizar2'])->name('admsatualizar');
+
+
+//Funções Professores
+
+Route::get('/professorcadastrar',[App\Http\Controllers\professorController::class, 'professorCadastrar'])->name('professorcadastrar');
+
+Route::get('/professorlogin',[App\Http\Controllers\professorController::class, 'professorLogin'])->name('professorlogin');
+
+Route::get('/professorperfil',[App\Http\Controllers\professorController::class, 'professorPerfil'])->name('professorperfil');
+
+Route::get('/professoreditar2',[App\Http\Controllers\professorController::class, 'professorEditar2'])->name('professoreditar2');
+
+Route::post('/professoratualizar2',[App\Http\Controllers\professorController::class, 'professorAtualizar2'])->name('professoratualizar2');
+
+Route::get('/professorturmas',[App\Http\Controllers\professorController::class, 'professorTurmas'])->name('professorturmas');

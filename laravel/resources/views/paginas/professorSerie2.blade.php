@@ -46,45 +46,38 @@
         <div class="container" style="margin: auto;">
             <div class="row align-items-center">
 
-
+                <form action="professorturmas" method="get">
 
                 <div class="container" style="margin: auto;">
-            <div class="row align-items-center">
+                    <div class="row align-items-center">
 
                 <div class="card" style="width: 24rem; height: 35vh; border-color: white;">
                     <div class="card-body">
-                        <a href="professorSerie1"><button value="Serie1" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">1ª Série</button></a>
+                        <a href="professorSerie1"><button value="Turma 1" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">Turma 1</button></a>
                     </div>
                 </div>
                 
                 <div class="card" style="width: 24rem; height: 35vh; border-color: white;">
                   <div class="card-body">
-                    <a href="professorSerie2"><button value="Serie2" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">2ª Série</button></a>
+                    <a href="usuarioNumeros"><button value="Turma 2" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">Turma 2</button></a>
                   </div>
                 </div>
 
                 <div class="card" style="width: 24rem; height: 35vh; border-color: white;">
                   <div class="card-body">
-                    <a href="professorSerie3"><button value="Serie3" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">3ª Série</button></a>
+                    <a href="usuarioNumeros"><button value="Turma 3" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">Turma 3</button></a>
                   </div>
                 </div>
 
                 <div class="card" style="width: 24rem; height: 35vh; border-color: white;">
                   <div class="card-body">
-                    <a href="professorSerie4"><button value="Serie4" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">4ª Série</button></a>
+                    <a href="usuarioNumeros"><button value="Turma 4" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">Turma 4</button></a>
                   </div>
                 </div>
-
-                <div class="card" style="width: 24rem; height: 35vh; border-color: white;">
-                  <div class="card-body">
-                    <a href="professorSerie5"><button value="Serie5" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">5ª Série</button></a>
-                  </div>
-                </div>
-
             </div>
         </div>
 
-
+                </form>
 
             </div>
         </div>

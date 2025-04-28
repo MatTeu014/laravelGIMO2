@@ -89,6 +89,18 @@
         </div>
         <br><br>
 
+        <!-- Turma -->
+        <h3 style="text-align: center;">Turma:</h3>
+        <select class="form-select" id="turma" name="turma" required
+          style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
+          <option selected disabled>Escolha a Turma</option>
+          <option value="Turma 1">Turma 1</option>
+          <option value="Turma 2">Turma 2</option>
+          <option value="Turma 3">Turma 3</option>
+          <option value="Turma 4">Turma 4</option>
+        </select>
+        <br><br>
+
         <!-- Série/Ano -->
         <h3 style="text-align: center;">Série/Ano:</h3>
         <select class="form-select" id="serie" name="serie" required

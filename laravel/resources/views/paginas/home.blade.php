@@ -31,11 +31,10 @@
 
       <!-- BOTÕES DIREITA (USUÁRIO E ADM COM LINKS) -->
       <form class="d-flex" role="search">
-        <a href="usuarioLogin" class="btn"
-           style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Login</a>
-        <a href="admLogin" class="btn ms-2"
-           style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Adm</a>
-      </form>
+        <a href="usuarioLogin" class="btn" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Login</a>
+        <a href="professorLogin" class="btn ms-2" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 10px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Professor</a>
+        <a href="admLogin" class="btn ms-2" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Adm</a>
+        </form>
     </div>
   </nav>
 
@@ -71,7 +70,7 @@
 
         <!-- Imagem à direita -->
         <div class="col-md-6 text-center">
-          <img src="https://via.placeholder.com/500x300" alt="Imagem ilustrativa" class="img-fluid rounded">
+          <img src="{{URL::to('/assets/img/img_home.png')}}" alt="Imagem ilustrativa" class="img-fluid rounded">
         </div>
 
       </div>
@@ -98,7 +97,7 @@
         <div class="col-12 col-md-4 mb-4" style="text-align: center;">
             <h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
             <div class="d-flex flex-column align-items-center">
-              <a href="https://www.linkedin.com/in/giseledahora" target="_blank" class="text-decoration-none text-primary mb-2">
+              <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank" class="text-decoration-none text-primary mb-2">
                 <i class="fab fa-linkedin me-2"></i>Gisele da Hora
               </a>
               <a href="https://www.linkedin.com/in/isaacsena" target="_blank" class="text-decoration-none text-primary mb-2">
@@ -127,7 +126,8 @@
         <div class="col-12 text-center mt-4">
           <h6 class="text-uppercase fw-bold mb-3">Redes Sociais</h6>
           <a href="https://www.linkedin.com" target="_blank" class="me-4 text-reset">
-            <i class="fab fa-linkedin fa-lg"></i>
+            <i class="fab fa-linkedin fa-lg"></i> 
+            
           </a>
           <a href="https://www.instagram.com" target="_blank" class="me-4 text-reset">
             <i class="fab fa-instagram fa-lg"></i>
