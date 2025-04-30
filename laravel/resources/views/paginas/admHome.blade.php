@@ -10,6 +10,10 @@
       <!-- BOTÕES CENTRAIS -->
       <div class="d-flex justify-content-center flex-grow-1" style="padding-top:35px;">
         <ul class="navbar-nav d-flex flex-row gap-3">
+
+          <li class="nav-item">
+            <a href="/usuarioHome" class="btn btn-danger" style=" background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
+          </li>
         </ul>
       </div>
 
@@ -94,15 +98,18 @@
     <div class="row">
       <div class="col-12 text-center mt-4">
         <h6 class="text-uppercase fw-bold mb-3">Redes Sociais</h6>
-        <a href="https://www.linkedin.com" target="_blank" class="me-4 text-reset">
-          <i class="fab fa-linkedin fa-lg"></i>
-        </a>
-        <a href="https://www.instagram.com" target="_blank" class="me-4 text-reset">
-          <i class="fab fa-instagram fa-lg"></i>
-        </a>
-        <a href="https://www.github.com" target="_blank" class="me-4 text-reset">
-          <i class="fab fa-github fa-lg"></i>
-        </a>
+              <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Gisele da Hora
+              </a>
+              <a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Isaac Sena
+              </a>
+              <a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Mateus Pavani
+              </a>
+              <a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
+              </a>
       </div>
     </div>
 

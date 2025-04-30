@@ -1,16 +1,16 @@
-<x-layout titulo="Cadastro de Professor">    
+<x-layout titulo="Cadastro de Séries">    
 
-  <nav class="navbar navbar-expand-lg" style="background-color: rgb(245, 101, 58); padding-top: 20px; padding-bottom: 20px;">
+  <nav class="navbar navbar-expand-lg" style="background-color: #BDBDBD; padding-top: 20px; padding-bottom: 20px;">
       <div class="container-fluid d-flex justify-content-between align-items-center">
 
         <!-- LOGO -->
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="admHome">
           <img src="{{ URL::to('/assets/img/logo_gimo.png') }}" alt="Logo" style="width: 100px; height: auto;">
         </a>
 
         <!-- BOTÃO LOGIN -->
         <form class="d-flex" role="search">
-          <a href="professorLogin" class="btn" style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color:rgb(245, 140, 109);">LOGIN</a>
+          <a href="usuarioLogin" class="btn" style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #E5CD59;">LOGIN</a>
         </form>
 
       </div>
@@ -18,10 +18,10 @@
 
   <!-- TÍTULO -->
   <br>
-  <h2 class="card-title" style="text-align: center;">Cadastro de Professor</h2>
+  <h2 class="card-title" style="text-align: center;">Cadastro de Séries</h2>
   <br>
   
-  <div class="card" style="width: 50%; border-color: rgb(255, 119, 77); border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
+  <div class="card" style="width: 50%; border-color: #f5e177; border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
     <div class="card-body">
     @if (session('success'))
     <div class="alert alert-success" role="alert">
@@ -33,10 +33,10 @@
         {{ session('failed') }}
     </div>
     @endif
-      <form action="/professorcadastrar" method="GET"> <!-- Ajuste o action se necessário -->
+      <form action="/usuarioscadastrar" method="GET"> <!-- Ajuste o action se necessário -->
 
         <!-- Nome -->
-        <h3 style="text-align: center;">Nome:</h3>
+        <h3 style="text-align: center;">Nome da Série:</h3>
         <div class="form-floating mb-3">
           <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required
             style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
@@ -44,61 +44,11 @@
         </div>
         <br>
 
-        <!-- Sobrenome -->
-        <h3 style="text-align: center;">Sobrenome:</h3>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required
-            style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-          <label for="sobrenome">Sobrenome</label>
-        </div>
-        <br>
-        
-        <!-- E-mail -->
-        <h3 style="text-align: center;">E-mail:</h3>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required
-            style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-          <label for="email">E-mail</label>
-        </div>
-        <br>
-
-        <!-- Senha -->
-        <h3 style="text-align: center;">Senha:</h3>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required
-            style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-          <label for="senha">Senha</label>
-        </div>
-        <br>
-
-        <!-- Idade -->
-        <h3 style="text-align: center;">Idade:</h3>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="idade" name="idade" placeholder="Digite sua idade" required
-            style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-          <label for="idade">Idade</label>
-        </div>
-        <br>
-
-        <!-- Escola -->
-        <h3 style="text-align: center;">Escola:</h3>
-        <div class="form-floating mb-3">
-          <select name="escola" class="form-select" aria-label="Default select example" required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-            <option selected Disabled>Escolha a Escola</option>
-            @foreach($escolas as $escola)
-            <option>{{$escola->nome}}</option>
-            @endforeach
-          </select>
-          <label for="escola">Escola</label>
-        </div>
-        <br>
-
-   
 
         <!-- Botão Cadastrar -->
         <div>
           <button type="submit" class="btn btn-primary"
-            style="background-color: white; color:rgb(255, 119, 77); border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 20%;">Cadastrar</button>
+            style="background-color: white; color: #E5CD59; border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 20%;">Cadastrar</button>
         </div>
         <br>
 

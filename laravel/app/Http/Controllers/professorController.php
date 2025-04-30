@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\professorModel;
 use App\Models\usuariosModel;
+use App\Models\escolasModel;
 
 class professorController extends Controller{
     
@@ -25,6 +26,8 @@ class professorController extends Controller{
             return redirect('professorCadastro')->with('failed', 'E-mail já cadastrado! Use outro E-mail');
         }
     
+        $idEscolaFK = escolasModel::where('nome', $request->input('escola'))->value('id');
+
         // Inserir Dados
         $model = new professorModel();
         $model->nome = $request->input('nome');
@@ -119,15 +122,23 @@ class professorController extends Controller{
         return redirect('professoresperfil');
     }
 
+    public function professorSeries(Request $request){
+        // Verifica se o funcionário está logado na sessão
+        if (!session()->has('professores')) {
+        }
+
+
+    }
+
     public function professorTurmas(Request $request){
         // Verifica se o funcionário está logado na sessão
         if (!session()->has('professores')) {
         }
         
 
-        $valor = $request->input('turma');
+        $serie = $request->input('serie');
 
-        $turmas = usuariosModel::where('turma',$valor)->get();
+        $turmas = usuariosModel::where('turma',$serie)->get();
 
 
         // Exibe o formulário de edição, passando os dados do funcionário

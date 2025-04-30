@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admsController;
 use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\escolasController;
+use App\Http\Controllers\seriesController;
+use App\Http\Controllers\turmasController;
+
 
 //Home
 Route::get('/', function () {
@@ -104,6 +108,29 @@ Route::get('admEditarPerfil', function () {
 });
 
 
+//escola
+
+
+Route::get('escolaCadastro', function () {
+    return view('paginas.escolaCadastro');
+});
+
+Route::get('escolaCadastroSeries', function () {
+    return view('paginas.escolaCadastroSeries');
+});
+
+Route::get('escolaCadastroTurmas', function () {
+    return view('paginas.escolaCadastroTurmas');
+});
+
+Route::get('escolaLogin', function () {
+    return view('paginas.escolaLogin');
+});
+
+Route::get('escolaHome', function () {
+    return view('paginas.escolaHome');
+});
+
 
 
 //professor
@@ -143,6 +170,22 @@ Route::get('professorSerie1', function () {
 Route::get('professorSerie2', function () {
     return view('paginas.professorSerie2');
 });
+
+Route::get('professorSerie3', function () {
+    return view('paginas.professorSerie2');
+});
+
+Route::get('professorSerie4', function () {
+    return view('paginas.professorSerie2');
+});
+
+Route::get('professorSerie5', function () {
+    return view('paginas.professorSerie2');
+});
+
+
+
+
 
 //Letras
 Route::get('letraA', function () {
@@ -398,3 +441,24 @@ Route::get('/professoreditar2',[App\Http\Controllers\professorController::class,
 Route::post('/professoratualizar2',[App\Http\Controllers\professorController::class, 'professorAtualizar2'])->name('professoratualizar2');
 
 Route::get('/professorturmas',[App\Http\Controllers\professorController::class, 'professorTurmas'])->name('professorturmas');
+
+
+
+//Funções Escolas
+
+Route::get('/escolascadastrar',[App\Http\Controllers\escolasController::class, 'escolasCadastrar'])->name('escolascadastrar');
+
+Route::get('/escolaslogin',[App\Http\Controllers\escolasController::class, 'escolasLogin'])->name('escolaslogin');
+
+Route::get('/escolasconsultarprofessor',[App\Http\Controllers\escolasController::class, 'escolasConsultarProfessor'])->name('escolasconsultarprofessor');
+
+
+///Funções Series
+
+Route::get('/seriescadastrar',[App\Http\Controllers\seriesController::class, 'seriesCadastrar'])->name('seriescadastrar');
+
+Route::get('/seriesconsultar',[App\Http\Controllers\seriesController::class, 'seriesConsultar'])->name('seriesconsultar');
+
+///Funções Turmas
+
+Route::get('/turmascadastrar',[App\Http\Controllers\turmasController::class, 'turmasCadastrar'])->name('turmascadastrar');

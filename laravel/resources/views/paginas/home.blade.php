@@ -29,12 +29,20 @@
         </ul>
       </div>
 
-      <!-- BOTÕES DIREITA (USUÁRIO E ADM COM LINKS) -->
       <form class="d-flex" role="search">
-        <a href="usuarioLogin" class="btn" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Login</a>
-        <a href="professorLogin" class="btn ms-2" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 10px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Professor</a>
-        <a href="admLogin" class="btn ms-2" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;">Adm</a>
-        </form>
+    <!-- Dropdown -->
+    <div class="dropdown ms-2">
+      <button class="btn dropdown-toggle" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        LOGIN
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="usuarioLogin">ALUNO</a></li>
+        <li><a class="dropdown-item" href="professorLogin">PROFESSOR</a></li>
+        <li><a class="dropdown-item" href="escolaLogin">ESCOLA</a></li>
+        <li><a class="dropdown-item" href="admLogin">ADM</a></li>
+      </ul>
+    </div>
+  </form>
     </div>
   </nav>
 
@@ -100,13 +108,13 @@
               <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank" class="text-decoration-none text-primary mb-2">
                 <i class="fab fa-linkedin me-2"></i>Gisele da Hora
               </a>
-              <a href="https://www.linkedin.com/in/isaacsena" target="_blank" class="text-decoration-none text-primary mb-2">
+              <a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank" class="text-decoration-none text-primary mb-2">
                 <i class="fab fa-linkedin me-2"></i>Isaac Sena
               </a>
-              <a href="https://www.linkedin.com/in/mateuspavani" target="_blank" class="text-decoration-none text-primary mb-2">
+              <a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank" class="text-decoration-none text-primary mb-2">
                 <i class="fab fa-linkedin me-2"></i>Mateus Pavani
               </a>
-              <a href="https://www.linkedin.com/in/otaviofidalgo" target="_blank" class="text-decoration-none text-primary mb-2">
+              <a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank" class="text-decoration-none text-primary mb-2">
                 <i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
               </a>
             </div>

@@ -289,18 +289,18 @@
         <div class="col-12 col-md-4 mb-4" style="text-align: center;">
           <h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
           <div class="d-flex flex-column align-items-center">
-            <a href="https://www.linkedin.com/in/giseledahora" target="_blank" class="text-decoration-none text-primary mb-2">
-              <i class="fab fa-linkedin me-2"></i>Gisele da Hora
-            </a>
-            <a href="https://www.linkedin.com/in/isaacsena" target="_blank" class="text-decoration-none text-primary mb-2">
-              <i class="fab fa-linkedin me-2"></i>Isaac Sena
-            </a>
-            <a href="https://www.linkedin.com/in/mateuspavani" target="_blank" class="text-decoration-none text-primary mb-2">
-              <i class="fab fa-linkedin me-2"></i>Mateus Pavani
-            </a>
-            <a href="https://www.linkedin.com/in/otaviofidalgo" target="_blank" class="text-decoration-none text-primary mb-2">
-              <i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
-            </a>
+              <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Gisele da Hora
+              </a>
+              <a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Isaac Sena
+              </a>
+              <a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Mateus Pavani
+              </a>
+              <a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank" class="text-decoration-none text-primary mb-2">
+                <i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
+              </a>
           </div>
         </div>
 
