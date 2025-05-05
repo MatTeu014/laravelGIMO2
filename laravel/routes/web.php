@@ -6,6 +6,7 @@ use App\Http\Controllers\usuariosController;
 use App\Http\Controllers\escolasController;
 use App\Http\Controllers\seriesController;
 use App\Http\Controllers\turmasController;
+use App\Http\Controllers\professoresseriesturmasController;
 
 
 //Home
@@ -359,6 +360,13 @@ Route::post('/usuarioaumentarprogressonumeros', [usuariosController::class, 'usu
 
 Route::get('/usuariorelatorio', [App\Http\Controllers\usuariosController::class, 'usuarioRelatorio'])->name('usuariorelatorio');
 
+Route::get('/usuariosconsultarescola',[App\Http\Controllers\usuariosController::class, 'usuariosConsultarEscola'])->name('usuariosconsultarescola');
+
+Route::get('/usuarioscadastrarserie',[App\Http\Controllers\usuariosController::class, 'usuariosCadastrarSerie'])->name('usuarioscadastrarserie');
+
+Route::get('/usuarioscadastrarturma',[App\Http\Controllers\usuariosController::class, 'usuariosCadastrarTurma'])->name('usuarioscadastrarturma');
+
+
 #######BOTOES DO ALFABETO########
 
 Route::post('/usuarioaumentarprogressoletraa', [usuariosController::class, 'usuarioAumentarProgressoLetraA'])->name('usuarioaumentarprogressoletraa');
@@ -442,6 +450,11 @@ Route::post('/professoratualizar2',[App\Http\Controllers\professorController::cl
 
 Route::get('/professorturmas',[App\Http\Controllers\professorController::class, 'professorTurmas'])->name('professorturmas');
 
+Route::get('/professorconsultarescolas',[App\Http\Controllers\professorController::class, 'professorConsultarEscolas'])->name('professorconsultarescolas');
+
+Route::get('/professorconsultarseries',[App\Http\Controllers\professorController::class, 'professorConsultarSeries'])->name('professorconsultarseries');
+
+Route::get('/professorconsultarturmas',[App\Http\Controllers\professorController::class, 'professorConsultarTurmas'])->name('professorconsultarturmas');
 
 
 //Funções Escolas
@@ -449,8 +462,6 @@ Route::get('/professorturmas',[App\Http\Controllers\professorController::class, 
 Route::get('/escolascadastrar',[App\Http\Controllers\escolasController::class, 'escolasCadastrar'])->name('escolascadastrar');
 
 Route::get('/escolaslogin',[App\Http\Controllers\escolasController::class, 'escolasLogin'])->name('escolaslogin');
-
-Route::get('/escolasconsultarprofessor',[App\Http\Controllers\escolasController::class, 'escolasConsultarProfessor'])->name('escolasconsultarprofessor');
 
 
 ///Funções Series
@@ -462,3 +473,14 @@ Route::get('/seriesconsultar',[App\Http\Controllers\seriesController::class, 'se
 ///Funções Turmas
 
 Route::get('/turmascadastrar',[App\Http\Controllers\turmasController::class, 'turmasCadastrar'])->name('turmascadastrar');
+
+
+
+//ProfessorSeriesTurmas
+
+
+Route::get('/professoresseriesturmascadastrarserie',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmasCadastrarSerie'])->name('professoresseriesturmascadastrarserie');
+
+Route::get('/professoresseriesturmacadastrarturma',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmaCadastrarTurma'])->name('professoresseriesturmacadastrarturma');
+
+Route::get('/professoresseriesturmaconsultaserie',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmaConsultaSerie'])->name('professoresseriesturmaconsultaserie');

@@ -18,10 +18,12 @@ return new class extends Migration
             $table->longtext('email')->unique();
             $table->longtext('senha');
             $table->integer('idade');
-            $table->longtext('escola');
-            $table->longtext('serie');
+            $table->integer('escola');
+            $table->integer('idSerieFK')->unsigned()->nullable();
+            $table->foreign('idSerieFK')->references('id')->on('series')->nullable();
+            $table->integer('idTurmaFK')->unsigned()->nullable();
+            $table->foreign('idTurmaFK')->references('id')->on('turmas')->nullable();
             $table->longtext('situacao');
-            $table->longtext('turma');
             $table->boolean('botaoA')->default(false);
             $table->boolean('botaoB')->default(false);
             $table->boolean('botaoC')->default(false);

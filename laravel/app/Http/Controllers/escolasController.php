@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\escolasModel;
+use App\Models\seriesModel;
+use App\Models\turmasModel;
+use App\Models\usuariosModel;
 
 class escolasController extends Controller{
     
@@ -54,12 +57,6 @@ class escolasController extends Controller{
         }
     }
 
-    public function escolasConsultarProfessor(Request $request){
 
-        $escolas = escolasModel::all();
-    
-        return view('paginas.professorCadastro', compact('escolas'));
-
-    }
 
 }//fim da classe

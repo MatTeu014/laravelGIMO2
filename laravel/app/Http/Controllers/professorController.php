@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\professorModel;
 use App\Models\usuariosModel;
 use App\Models\escolasModel;
+use App\Models\seriesModel;
+use App\Models\turmasModel;
+
+use Illuminate\Support\Facades\Log;
 
 class professorController extends Controller{
     
@@ -15,6 +19,15 @@ class professorController extends Controller{
         return view('')->With('dados',$dados);
 
     }
+
+    public function professorConsultarEscolas(Request $request){
+
+        $escolas = escolasModel::all();
+    
+        return view('paginas.professorCadastro', compact('escolas'));
+
+    }
+
 
     public function professorCadastrar(Request $request){
 
@@ -35,12 +48,13 @@ class professorController extends Controller{
         $model->email = $request->input('email');
         $model->senha = $request->input('senha');
         $model->idade = $request->input('idade');
+        $model->idEscolaFK = $idEscolaFK;
         $model->situacao = "Ativo";
     
         // Guardar os dados no banco
         $model->save();
     
-        return redirect('professorCadastro')->with('success', 'Professor cadastrado com sucesso!');
+        return redirect('professorLogin')->with('success', 'Professor cadastrado com sucesso!');
     }
 
     public function professorLogin(Request $request){
@@ -52,16 +66,52 @@ class professorController extends Controller{
         
         // Verificar se o funcionário existe e a senha está correta
         if ($professores=professorModel::where('email', $email)->where('senha', $senha)->first()) {
-    
+            
             // Armazenar os dados do funcionário na sessão
             session(['professores' => $professores]);
-    
+            $idescola = professorModel::where('email', $email)->value('idEscolaFK');
+            session(['idescola' => $idescola]);
+
+            $idprofessor = professorModel::where('email', $email)->value('id');
+            session(['idprofessor' => $idprofessor]);
+            Log::info("ID DO PROFESSOR $idprofessor");
+            
             // Redirecionar para a página homeLogado
             return redirect('professorHome');
         } else {
             // Login falhou
             return redirect('professorLogin')->with('failed', 'E-mail ou senha inválido');
         }
+        
+    }
+    
+    public function professorConsultarSeries(Request $request){
+        
+        $idescola = session('idescola');
+        Log::info("IDESCOLA $idescola");
+        
+        $series = seriesModel::where('idEscolaFK', $idescola)->get();
+    
+        return view('paginas.professorCadastroSeries', compact('series'));
+
+    }
+
+    public function professorCadastrarSeries(Request $request){
+        
+        $idescola = session('idescola');
+        Log::info("IDESCOLA $idescola");
+        
+        $series = seriesModel::where('idEscolaFK', $idescola)->get();
+    
+        return view('paginas.professorCadastroSeries', compact('series'));
+
+    }
+
+    public function professorConsultarTurmas(Request $request){
+
+        $turmas = turmasModel::all();
+    
+        return view('paginas.professorCadastroTurmas', compact('turmas'));
 
     }
 

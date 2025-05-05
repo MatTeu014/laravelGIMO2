@@ -1,4 +1,4 @@
-<x-layout titulo="Home Professor">
+<x-layout titulo="Professor Relatórios">
 	<nav class="navbar navbar-expand-lg sticky-top"
 		style="background-color:rgb(245, 101, 58); padding-top: 20px; padding-bottom: 20px;">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
@@ -11,11 +11,6 @@
 			<!-- BOTÕES CENTRAIS -->
 			<div class="d-flex justify-content-center flex-grow-1" style="padding-top:35px;">
 				<ul class="navbar-nav d-flex flex-row gap-3">
-				<li class="nav-item">
-						<a href="/professorHome" class="btn btn-danger" style=" background-color:rgb(245, 101, 58); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 160px; text-align: center;">Home</a>
-						<a href="professorconsultarseries" class="btn btn-danger" style=" background-color:rgb(245, 101, 58); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 160px; text-align: center;">Séries/Turmas</a>
-						<a href="professoresseriesturmaconsultaserie" class="btn btn-danger" style=" background-color: rgb(245, 101, 58); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 160px; text-align: center;">Relatórios</a>
-					</li>
 				</ul>
 			</div>
 
@@ -51,16 +46,29 @@
 		</div>
 	</nav>
 
-	<section class="py-5" style="padding-top: 80px; text-align: center;height: 70vh;">
+	<h1 style="text-align: center; margin-top: 2%;">Escolha uma Série</h1>
+
+	<section class="py-5" style="padding-top: 80px; text-align: center;">
 		<div class="container" style="margin: auto;">
 			<div class="row align-items-center">
 
-				<div class="container" style="margin: auto;">
-					<div class="row align-items-center">
+				<form action="professorturmas" method="get">
 
-						
+					<div class="container" style="margin: auto;">
+						<div class="row align-items-center">
+
+							@foreach ($series as $serie)
+								<div class="card" style="width: 24rem; height: 35vh; border-color: white;">
+									<div class="card-body">
+										<button value="" style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">{{ $serie->nome }}</button>
+									</div>
+								</div>
+							@endforeach
+
+						</div>
 					</div>
-				</div>
+
+				</form>
 
 			</div>
 		</div>
@@ -86,21 +94,21 @@
 				<div class="col-12 col-md-4 mb-4">
 					<h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
 					<div class="flex-column align-items-start text-center">
-						<a href="https://www.linkedin.com/in/nome-do-perfil" target="_blank"
-							class="d-block text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Perfil 1
+						<a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank"
+							class="text-decoration-none text-primary mb-2">
+							<i class="fab fa-linkedin me-2"></i>Gisele da Hora
 						</a>
-						<a href="https://www.linkedin.com/in/nome-do-perfil" target="_blank"
-							class="d-block text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Perfil 2
+						<a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank"
+							class="text-decoration-none text-primary mb-2">
+							<i class="fab fa-linkedin me-2"></i>Isaac Sena
 						</a>
-						<a href="https://www.linkedin.com/in/nome-do-perfil" target="_blank"
-							class="d-block text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Perfil 3
+						<a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank"
+							class="text-decoration-none text-primary mb-2">
+							<i class="fab fa-linkedin me-2"></i>Mateus Pavani
 						</a>
-						<a href="https://www.linkedin.com/in/nome-do-perfil" target="_blank"
-							class="d-block text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Perfil 4
+						<a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank"
+							class="text-decoration-none text-primary mb-2">
+							<i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
 						</a>
 					</div>
 				</div>
@@ -118,21 +126,14 @@
 			<div class="row">
 				<div class="col-12 text-center mt-4">
 					<h6 class="text-uppercase fw-bold mb-3">Redes Sociais</h6>
-					<a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank"
-						class="text-decoration-none text-primary mb-2">
-						<i class="fab fa-linkedin me-2"></i>Gisele da Hora
+					<a href="https://www.linkedin.com" target="_blank" class="me-4 text-reset">
+						<i class="fab fa-linkedin fa-lg"></i>
 					</a>
-					<a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank"
-						class="text-decoration-none text-primary mb-2">
-						<i class="fab fa-linkedin me-2"></i>Isaac Sena
+					<a href="https://www.instagram.com" target="_blank" class="me-4 text-reset">
+						<i class="fab fa-instagram fa-lg"></i>
 					</a>
-					<a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank"
-						class="text-decoration-none text-primary mb-2">
-						<i class="fab fa-linkedin me-2"></i>Mateus Pavani
-					</a>
-					<a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank"
-						class="text-decoration-none text-primary mb-2">
-						<i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
+					<a href="https://www.github.com" target="_blank" class="me-4 text-reset">
+						<i class="fab fa-github fa-lg"></i>
 					</a>
 				</div>
 			</div>

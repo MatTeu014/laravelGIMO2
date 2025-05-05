@@ -57,11 +57,13 @@
         <br>
 
         <!-- Botão Logar -->
-        <div>
-          <button type="submit" class="btn btn-primary"
-            style="background-color: white; color: #E5CD59; border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 20%;">Entrar</button>
-        </div>
-        <br>
+        < <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+            <a href="home">
+              <button type="button" class="btn btn-primary" style="background-color: white; color: color: #E5CD59; border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 150px;">Voltar</button>
+            </a>
+            <button type="submit" class="btn btn-primary" style="background-color: white; color: color: #E5CD59; border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 150px;">Entrar</button>
+
+          </div>
 
       </form>
     </div>

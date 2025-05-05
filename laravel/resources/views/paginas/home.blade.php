@@ -1,5 +1,6 @@
-<x-layout titulo="Home">    
-  <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #DA3E41; padding-top: 20px; padding-bottom: 20px;">
+<x-layout titulo="Home">
+  <nav class="navbar navbar-expand-lg sticky-top"
+    style="background-color: #DA3E41; padding-top: 20px; padding-bottom: 20px;">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
       <!-- LOGO (Imagem responsiva) -->
@@ -12,37 +13,39 @@
         <ul class="navbar-nav d-flex flex-row gap-3">
           <li class="nav-item">
             <a href="/" class="btn btn-danger"
-               style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
+              style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
           </li>
           <li class="nav-item">
             <a href="/sobrenos" class="btn btn-danger"
-               style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
+              style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
           </li>
           <li class="nav-item">
             <a href="/usuarioLogin" class="btn btn-danger"
-               style="border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
+              style="border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
             <a href="/usuarioLogin" class="btn btn-danger"
-               style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
+              style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
       </div>
 
-      <form class="d-flex" role="search">
-    <!-- Dropdown -->
-    <div class="dropdown ms-2">
-      <button class="btn dropdown-toggle" style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-        LOGIN
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="usuarioLogin">ALUNO</a></li>
-        <li><a class="dropdown-item" href="professorLogin">PROFESSOR</a></li>
-        <li><a class="dropdown-item" href="escolaLogin">ESCOLA</a></li>
-        <li><a class="dropdown-item" href="admLogin">ADM</a></li>
-      </ul>
-    </div>
-  </form>
+      <form class="d-flex" role="search" style="margin-right: 4%">
+        <!-- Dropdown -->
+        <div class="dropdown ms-2">
+          <button class="btn dropdown-toggle"
+            style="background-color: white; border: 0px solid black; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #DA3E41;"
+            type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            LOGIN
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="usuarioLogin">ALUNO</a></li>
+            <li><a class="dropdown-item" href="professorLogin">PROFESSOR</a></li>
+            <li><a class="dropdown-item" href="escolaLogin">ESCOLA</a></li>
+            <li><a class="dropdown-item" href="admLogin">ADM</a></li>
+          </ul>
+        </div>
+      </form>
     </div>
   </nav>
 
@@ -54,21 +57,21 @@
         <div class="col-md-6">
           <h2 class="mb-4">Título da Seção</h2>
           <p>
-            Este é um exemplo de seção com texto do lado esquerdo e uma imagem do lado direito. 
+            Este é um exemplo de seção com texto do lado esquerdo e uma imagem do lado direito.
             Você pode usar essa estrutura para descrever seu projeto, equipe ou qualquer outro conteúdo relevante.
           </p>
           <p>
             Adicione quantos parágrafos quiser, ou até botões se preferir. É totalmente personalizável.
           </p>
           <p>
-            Este é um exemplo de seção com texto do lado esquerdo e uma imagem do lado direito. 
+            Este é um exemplo de seção com texto do lado esquerdo e uma imagem do lado direito.
             Você pode usar essa estrutura para descrever seu projeto, equipe ou qualquer outro conteúdo relevante.
           </p>
           <p>
             Adicione quantos parágrafos quiser, ou até botões se preferir. É totalmente personalizável.
           </p>
           <p>
-            Este é um exemplo de seção com texto do lado esquerdo e uma imagem do lado direito. 
+            Este é um exemplo de seção com texto do lado esquerdo e uma imagem do lado direito.
             Você pode usar essa estrutura para descrever seu projeto, equipe ou qualquer outro conteúdo relevante.
           </p>
           <p>
@@ -103,22 +106,26 @@
 
         <!-- LinkedIn (corrigido) -->
         <div class="col-12 col-md-4 mb-4" style="text-align: center;">
-            <h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
-            <div class="d-flex flex-column align-items-center">
-              <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank" class="text-decoration-none text-primary mb-2">
-                <i class="fab fa-linkedin me-2"></i>Gisele da Hora
-              </a>
-              <a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank" class="text-decoration-none text-primary mb-2">
-                <i class="fab fa-linkedin me-2"></i>Isaac Sena
-              </a>
-              <a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank" class="text-decoration-none text-primary mb-2">
-                <i class="fab fa-linkedin me-2"></i>Mateus Pavani
-              </a>
-              <a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank" class="text-decoration-none text-primary mb-2">
-                <i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
-              </a>
-            </div>
+          <h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
+          <div class="d-flex flex-column align-items-center">
+            <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank"
+              class="text-decoration-none text-primary mb-2">
+              <i class="fab fa-linkedin me-2"></i>Gisele da Hora
+            </a>
+            <a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank"
+              class="text-decoration-none text-primary mb-2">
+              <i class="fab fa-linkedin me-2"></i>Isaac Sena
+            </a>
+            <a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank"
+              class="text-decoration-none text-primary mb-2">
+              <i class="fab fa-linkedin me-2"></i>Mateus Pavani
+            </a>
+            <a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank"
+              class="text-decoration-none text-primary mb-2">
+              <i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
+            </a>
           </div>
+        </div>
 
         <!-- Contato -->
         <div class="col-12 col-md-4 mb-4">
@@ -134,8 +141,8 @@
         <div class="col-12 text-center mt-4">
           <h6 class="text-uppercase fw-bold mb-3">Redes Sociais</h6>
           <a href="https://www.linkedin.com" target="_blank" class="me-4 text-reset">
-            <i class="fab fa-linkedin fa-lg"></i> 
-            
+            <i class="fab fa-linkedin fa-lg"></i>
+
           </a>
           <a href="https://www.instagram.com" target="_blank" class="me-4 text-reset">
             <i class="fab fa-instagram fa-lg"></i>

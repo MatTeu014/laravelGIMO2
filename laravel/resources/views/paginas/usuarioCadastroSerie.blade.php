@@ -1,4 +1,4 @@
-<x-layout titulo="Cadastro de Usuário">
+<x-layout titulo="Cadastro de Série de Usuário">
 
 	<nav class="navbar navbar-expand-lg" style="background-color: #f5e177; padding-top: 20px; padding-bottom: 20px;">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
@@ -19,7 +19,7 @@
 
 	<!-- TÍTULO -->
 	<br>
-	<h2 class="card-title" style="text-align: center;">Cadastro de Usuário</h2>
+	<h2 class="card-title" style="text-align: center;">Em qual Série você está matriculado</h2>
 	<br>
 
 	<div class="card"
@@ -35,68 +35,18 @@
 					{{ session('failed') }}
 				</div>
 			@endif
-			<form action="/usuarioscadastrar" method="GET"> <!-- Ajuste o action se necessário -->
+			<form action="/usuarioscadastrarserie" method="GET"> <!-- Ajuste o action se necessário -->
 
-				<!-- Nome -->
-				<h3 style="text-align: center;">Nome:</h3>
-				<div class="form-floating mb-3">
-					<input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required
-						style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-					<label for="nome">Nome</label>
-				</div>
-				<br>
 
-				<!-- Sobrenome -->
-				<h3 style="text-align: center;">Sobrenome:</h3>
-				<div class="form-floating mb-3">
-					<input type="text" class="form-control" id="sobrenome" name="sobrenome"
-						placeholder="Digite seu sobrenome" required
-						style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-					<label for="sobrenome">Sobrenome</label>
-				</div>
-				<br>
-
-				<!-- E-mail -->
-				<h3 style="text-align: center;">E-mail:</h3>
-				<div class="form-floating mb-3">
-					<input type="text" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required
-						style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-					<label for="email">E-mail</label>
-				</div>
-				<br>
-
-				<!-- Senha -->
-				<h3 style="text-align: center;">Senha:</h3>
-				<div class="form-floating mb-3">
-					<input type="text" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required
-						style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-					<label for="senha">Senha</label>
-				</div>
-				<br>
-
-				<!-- Idade -->
-				<h3 style="text-align: center;">Idade:</h3>
-				<div class="form-floating mb-3">
-					<input type="text" class="form-control" id="idade" name="idade" placeholder="Digite sua idade" required
-						style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-					<label for="idade">Idade</label>
-				</div>
-				<br>
-
-				<!-- Escola -->
-				<h3 style="text-align: center;">Escola:</h3>
-				<div class="form-floating mb-3">
-					<select class="form-select" id="escola" name="escola" required
-						style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-						<option selected disabled>Escolha a Escola</option>
-
-						@foreach ($escolas as $escola)
-							<option>{{ $escola->nome }}</option>
-						@endforeach
-
-					</select>
-					<label for="escola">Escola</label>
-				</div>
+				<!-- Série -->
+				<h3 style="text-align: center;">Série:</h3>
+				<select class="form-select" id="serie" name="serie" required
+					style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
+					<option selected disabled>Escolha a Série</option>
+					@foreach ($series as $serie)
+						<option>{{ $serie-> nome }}</option>
+					@endforeach
+				</select>
 				<br><br>
 
 				<!-- Botão Cadastrar -->
