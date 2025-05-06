@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id('id');
             $table->longText('nome');
             $table->integer('idEscolaFK')->unsigned();
-            $table->foreign('idEscolaFK')->references('id')->on('escolas');
+            $table->foreign('idEscolaFK')->references('id')->on('escolas')->onDelete('cascade');
             $table->timestamps();
         });
     }

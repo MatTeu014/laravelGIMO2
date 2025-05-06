@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('escolas', function (Blueprint $table) {
             $table->id('id');
             $table->longText('nome');
+            $table->longText('email')->unique();
             $table->longText('senha');
             $table->longText('endereco');
             $table->longText('telefone');

@@ -463,6 +463,8 @@ Route::get('/escolascadastrar',[App\Http\Controllers\escolasController::class, '
 
 Route::get('/escolaslogin',[App\Http\Controllers\escolasController::class, 'escolasLogin'])->name('escolaslogin');
 
+Route::get('/escolasperfil',[App\Http\Controllers\escolasController::class, 'escolasPerfil'])->name('escolasperfil');
+
 
 ///Funções Series
 
@@ -484,3 +486,7 @@ Route::get('/professoresseriesturmascadastrarserie',[App\Http\Controllers\profes
 Route::get('/professoresseriesturmacadastrarturma',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmaCadastrarTurma'])->name('professoresseriesturmacadastrarturma');
 
 Route::get('/professoresseriesturmaconsultaserie',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmaConsultaSerie'])->name('professoresseriesturmaconsultaserie');
+
+Route::get('/professoresseriesturmaconsultaturma',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmaConsultaTurma'])->name('professoresseriesturmaconsultaturma');
+
+Route::get('/professoresseriesturmaconsultaalunos',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmaConsultaAlunos'])->name('professoresseriesturmaconsultaalunos');

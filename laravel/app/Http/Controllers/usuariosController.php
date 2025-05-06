@@ -41,23 +41,14 @@ class usuariosController extends Controller
 
         $idescolaFK = escolasModel::where('nome', $request->input('escola'))->value('id');
 
-        // Inserir Dados
-        $model = new usuariosModel();
-        $model->nome = $request->input('nome');
-        $model->sobrenome = $request->input('sobrenome');
-        $model->email = $email;
-        $model->senha = $request->input('senha');
-        $model->idade = $request->input('idade');
-        $model->escola = $idescolaFK;
-        $model->situacao = "Ativo";
-        $model->progressonumeros = 0;
-        $model->progressoletras = 0;
+        session(['nome' => $request->input('nome')]);
+        session(['sobrenome' => $request->input('sobrenome')]);
+        session(['email' => $request->input('email')]);
+        session(['senha' => $request->input('senha')]);
+        session(['idade' => $request->input('idade')]);
+        session(['idescolaFK' => $idescolaFK]);
 
-        
-        // Guardar os dados no banco
-        $model->save();
-        
-        session('idEscolaFK',$idescolaFK);
+        //Log::info("NOME $nome");
         $series = seriesModel::where('idEscolaFK', $idescolaFK)->get();
         
         return view('paginas.usuarioCadastroSerie', compact('series'));
@@ -70,30 +61,37 @@ class usuariosController extends Controller
 
         $idserie = seriesModel::where('nome', $request->input('serie'))->value('id');
 
-        
-        $idusuario = usuariosModel::latest('id')->first();
-        
-        $idusuario->update([
-            'idSerieFK' => $idserie,
-        ]);
-        
+ 
+        session(['idserie' => $idserie]);
+        Log::info("ID DA SERIE $idserie");
+
         $turmas = turmasModel::where('idSeriesFK',$idserie)->get();
 
-        Log::info("ID DA SERIE $idusuario");
-        Log::info("ID DA SERIE $idserie");
         return view('paginas.usuarioCadastroTurma', compact('turmas'));
     }
-
+    
     public function usuariosCadastrarTurma(Request $request)
     {
-
-        $idturma = turmasModel::where('nome', $request->input('turma'))->value('id');
-
-        $idusuario = usuariosModel::latest('id')->first();
         
-        $idusuario->update([
-            'idTurmaFK' => $idturma,
-        ]);
+        $idserie = session('idserie');
+        $idturma = turmasModel::where('nome', $request->input('turma'))->where('idSeriesFK', $idserie)->value('id');
+        Log::info("ID DA SERIE $idturma");
+
+
+        $model = new usuariosModel();
+        $model->nome = session('nome');
+        $model->sobrenome = session('sobrenome');
+        $model->email = session('email');
+        $model->senha = session('senha');
+        $model->idade = session('idade');
+        $model->escola = session('idescolaFK');
+        $model->idSerieFK = session('idserie');
+        $model->idturmaFK = $idturma;
+        $model->situacao = "Ativo";
+        $model->progressonumeros = 0;
+        $model->progressoletras = 0;
+        
+        $model->save();
 
         return view('paginas.usuarioLogin');
 

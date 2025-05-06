@@ -1,4 +1,4 @@
-<x-layout titulo="Home Professor">
+<x-layout titulo="Professor Séries">
 	<nav class="navbar navbar-expand-lg sticky-top"
 		style="background-color:rgb(245, 101, 58); padding-top: 20px; padding-bottom: 20px;">
 		<div class="container-fluid d-flex justify-content-between align-items-center">
@@ -11,14 +11,6 @@
 			<!-- BOTÕES CENTRAIS -->
 			<div class="d-flex justify-content-center flex-grow-1" style="padding-top:35px;">
 				<ul class="navbar-nav d-flex flex-row gap-3">
-					<li class="nav-item">
-						<a href="/professorHome" class="btn btn-danger"
-							style=" background-color:rgb(245, 101, 58); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 160px; text-align: center;">Home</a>
-						<a href="professorconsultarseries" class="btn btn-danger"
-							style=" background-color:rgb(245, 101, 58); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 160px; text-align: center;">Séries/Turmas</a>
-						<a href="professoresseriesturmaconsultaserie" class="btn btn-danger"
-							style=" background-color: rgb(245, 101, 58); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 160px; text-align: center;">Relatórios</a>
-					</li>
 				</ul>
 			</div>
 
@@ -36,9 +28,8 @@
 						<ul class="navbar-nav">
 							<li class="nav-item dropdown">
 								<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
-									class="bi bi-person-circle" viewBox="0 0 16 16" class="nav-link dropdown-toggle"
-									href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-									style="margin-right: 100px;">
+									class="bi bi-person-circle" viewBox="0 0 16 16" class="nav-link dropdown-toggle" href="#"
+									role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 100px;">
 									<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
 									<path fill-rule="evenodd"
 										d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
@@ -55,48 +46,37 @@
 		</div>
 	</nav>
 
-	
-		<section class="py-5" style="padding-top: 80px;"> <!-- Ajuste o padding-top para evitar sobreposição -->
-			<div class="container">
-				<div class="row align-items-center">
+	<h1 style="text-align: center; margin-top: 2%;">Escolha uma Série</h1>
 
-					<!-- Texto à esquerda -->
-					<div class="col-md-6">
-						<h2 class="mb-4">Bem-Vindo Professor(a)</h2>
-						<p>
-							•	Olá, Professor(a), bem-vindo a sua área. Aqui você poderá verificar suas turmas e monitorar seus rendimentos de cada aluno.
-						</p>
-						<p>
-							•	Em séries/turmas, você poderá escolher a série que está lecionando e assim conseguindo cadastrar a turma que dará aula.
-						</p>
-						<p>
-							•	Assim que criar, já poderá verificar o relatório da sua turma, podendo ver individualmente o desenvolvimento de cada aluno, vendo as atividade completas e incompletas, podendo ter um controle da evolução individual.
-						</p>
-						<p>
-							
-						</p>
-						<p>
-							
-						</p>
-						<p>
-							
-						</p>
+	<section class="py-5" style="padding-top: 80px; text-align: center;">
+		<div class="container" style="margin: auto;">
+			<div class="row align-items-center">
+
+				<form action="professoresseriesturmaconsultaturma" method="get">
+
+					<div class="container" style="margin: auto;">
+						<div class="row align-items-center">
+
+							@foreach ($series as $serie)
+								<div class="card" style="width: 24rem; height: 35vh; border-color: white;">
+									<div class="card-body">
+										<button name="serie" value="{{ $serie->id }}"
+											style="font-size: 50px; border-radius: 30px; border-color: rgb(245, 101, 58); border-style: solid; background-color: white;">{{ $serie->nome }}</button>
+									</div>
+								</div>
+							@endforeach
+
+						</div>
 					</div>
 
-					<!-- Imagem à direita -->
-					<div class="col-md-6 text-center">
-						<img src="{{URL::to('/assets/img/prof.png')}}" alt="Imagem ilustrativa"
-							class="img-fluid rounded">
-					</div>
+				</form>
 
-				</div>
 			</div>
-		</section>
-		
+		</div>
+	</section>
 
-
-  <!-- Footer centralizado -->
-  <footer class="text-muted" style="background-color: #D3D3D3; width: 100%;">
+ <!-- Footer centralizado -->
+ <footer class="text-muted" style="background-color: #D3D3D3; width: 100%;">
     <div class="container py-5">
       <div class="row text-center justify-content-center">
 
@@ -158,5 +138,6 @@
 
   <!-- FontAwesome (caso ainda não esteja incluído) -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
 </x-layout>

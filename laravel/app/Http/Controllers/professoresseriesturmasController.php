@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\professorModel;
 use Illuminate\Http\Request;
 use App\Models\usuariosModel;
 use App\Models\escolasModel;
@@ -28,7 +29,7 @@ class professoresseriesturmasController extends Controller
 
         $idserie = session('idserie');
         $idprofessor = session('idprofessor');
-        $idturma = turmasModel::where('nome', $request->input('turma'))->value('id');
+        $idturma = turmasModel::where('nome', $request->input('turma'))->where('idSeriesFK',$idserie)->value('id');
 
         $model = new professoresseriesturmasModel();
         $model->idProfessorFK = $idprofessor;
@@ -43,12 +44,50 @@ class professoresseriesturmasController extends Controller
     public function professoresseriesturmaConsultaSerie(Request $request){
 
         $idprofessor = session('idprofessor');
-        $idserieFK = professoresseriesturmasModel::where('idProfessorFK', $idprofessor)->value('idSerieFK');
+        $idserieFK = professoresseriesturmasModel::where('idProfessorFK', $idprofessor)->pluck('idSerieFK');
 
-        $series = seriesModel::where('id', $idserieFK)->get()->all();
-        //Log::info(" dadaad $series");  
 
-        return view('paginas.professorRelatorios', compact('series'));
+        $series = seriesModel::whereIn('id', $idserieFK)->get();
+        
+        session(['idseries' => $series->pluck('id')]);
+        
+        //Log::info(" dadaad $idserieFK");  
+        return view('paginas.professorRelatoriosSeries', compact('series'));
+
+    }
+
+    public function professoresseriesturmaConsultaTurma(Request $request){
+
+        $idprofessor = session('idprofessor');
+        $idturmaFK = professoresseriesturmasModel::where('idProfessorFK', $idprofessor)->where('idSerieFK', $request->input('serie'))->pluck('idTurmaFK');
+        Log::info(" dadaad $idturmaFK");
+       
+        $serie = $request->input('serie');
+        
+        $turmas = turmasModel::whereIn('id', $idturmaFK)->get();
+
+        session(['serie' => $serie]);
+        
+        session(['turma'=> $turmas]);
+        
+        
+        return view('paginas.professorRelatoriosTurmas', compact('turmas'));
+
+    }
+
+    public function professoresseriesturmaConsultaAlunos(Request $request){
+
+        $idprofessor = session('idprofessor');
+
+        $escola = professorModel::where('id', $idprofessor)->value('idEscolaFK');
+        $serie = session('serie');
+        $turma = $request->input('turma');
+
+        $alunos = usuariosModel::where('escola', $escola)->where('idSerieFK', $serie)->where('idTurmaFK', $turma)->get();
+
+        Log::info(" dadaad $escola, $serie, $turma");
+
+        return view('paginas.professorRelatoriosAlunos', compact('alunos'));
 
     }
 

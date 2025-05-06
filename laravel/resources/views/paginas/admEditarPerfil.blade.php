@@ -141,67 +141,68 @@
 	</form>
 
 
-	<!-- Footer remains unchanged -->
-	<footer class="text-muted" style="background-color: #D3D3D3; width: 100%;">
-		<div class="container py-5">
-			<div class="row text-center text-md-start">
+ <!-- Footer centralizado -->
+ <footer class="text-muted" style="background-color: #D3D3D3; width: 100%;">
+    <div class="container py-5">
+      <div class="row text-center justify-content-center">
 
-				<!-- Projeto GIMO -->
-				<div class="col-12 col-md-4 mb-4">
-					<h6 class="text-uppercase fw-bold mb-3">Projeto GIMO Desenvolvido por:</h6>
-					<div class="d-flex flex-column align-items-start">
-						<p class="mb-2">Gisele da Hora Silva</p>
-						<p class="mb-2">Isaac Sena Martins</p>
-						<p class="mb-2">Mateus Albuquerque Pavani</p>
-						<p class="mb-2">Otávio Fidalgo</p>
-					</div>
-				</div>
+        <!-- Projeto GIMO -->
+        <div class="col-12 col-md-4 mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Projeto GIMO Desenvolvido por:</h6>
+          <div class="d-flex flex-column align-items-center">
+            <p class="mb-2">Gisele da Hora Silva</p>
+            <p class="mb-2">Isaac Sena Martins</p>
+            <p class="mb-2">Mateus Albuquerque Pavani</p>
+            <p class="mb-2">Otávio Fidalgo</p>
+          </div>
+        </div>
 
-				<!-- Redes Sociais / Link da equipe -->
-				<div class="col-12 col-md-4 mb-4">
-					<h6 class="text-uppercase fw-bold mb-3">Linkedin</h6>
-					<div class="flex-column align-items-start text-center">
-						<a href="https://www.linkedin.com/in/nome-do-perfil" target="_blank"
-							class="d-block text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>https://www.bing.com/searchsdasadadadsa
-						</a>
-					</div>
-				</div>
+        <!-- LinkedIn centralizado e alinhado -->
+        <div class="col-12 col-md-4 mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
+          <div class="d-flex flex-column align-items-center">
+            <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Gisele da Hora</span>
+            </a>
+            <a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Isaac Sena</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Mateus Pavani</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Otávio Fidalgo</span>
+            </a>
+          </div>
+        </div>
 
-				<!-- Contato -->
-				<div class="col-12 col-md-4 mb-4">
-					<h6 class="text-uppercase fw-bold mb-3">Contato</h6>
-					<p><i class="fas fa-envelope me-2"></i>gimo.projeto@email.com</p>
-					<p><i class="fas fa-phone me-2"></i>(11) 12345-6789</p>
-					<p><i class="fas fa-map-marker-alt me-2"></i>Senac - SBC, Brasil</p>
-				</div>
-			</div>
+        <!-- Contato e Redes Sociais centralizados -->
+        <div class="col-12 col-md-4 mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Contato</h6>
+          <div class="d-flex flex-column align-items-center">
+            <p><i class="fas fa-envelope me-2" style="color: #000;"></i>gimo.projeto@email.com</p>
+            <p><i class="fas fa-map-marker-alt me-2" style="color: #000;"></i>Senac - SBC, Brasil</p>
+            <a href="https://www.instagram.com" target="_blank" class="text-reset d-flex align-items-center">
+              <i class="fab fa-instagram fa-lg me-2" style="color: #000;"></i><span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-			<!-- Redes Sociais - Siga-nos (centralizado) -->
-			<div class="row">
-				<div class="col-12 text-center mt-4">
-					<h6 class="text-uppercase fw-bold mb-3">Redes Sociais</h6>
-					<a href="https://www.linkedin.com" target="_blank" class="me-4 text-reset">
-						<i class="fab fa-linkedin fa-lg"></i>
-					</a>
-					<a href="https://www.instagram.com" target="_blank" class="me-4 text-reset">
-						<i class="fab fa-instagram fa-lg"></i>
-					</a>
-					<a href="https://www.github.com" target="_blank" class="me-4 text-reset">
-						<i class="fab fa-github fa-lg"></i>
-					</a>
-				</div>
-			</div>
+      <!-- Direitos Autorais -->
+      <div class="row">
+        <div class="col-12 text-center mt-4">
+          <p class="mb-0">&copy; 2025 Projeto GIMO. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-			<!-- Direitos Autorais -->
-			<div class="row">
-				<div class="col-12 text-center mt-4">
-					<p class="mb-0">&copy; 2025 Projeto GIMO. Todos os direitos reservados.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<!-- FontAwesome (caso ainda não esteja incluído) -->
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- FontAwesome (caso ainda não esteja incluído) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
 </x-layout>

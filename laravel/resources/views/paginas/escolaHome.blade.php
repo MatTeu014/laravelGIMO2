@@ -14,11 +14,11 @@
 
 					<li class="nav-item">
 						<a href="/usuarioHome" class="btn btn-danger"
-							style=" background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
+							style=" background-color: rgb(155, 109, 50); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
 						<a href="/escolaCadastroSeries" class="btn btn-danger"
-							style=" background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Séries</a>
+							style=" background-color: rgb(155, 109, 50); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Séries</a>
 						<a href="seriesconsultar" class="btn btn-danger"
-							style=" background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Turmas</a>
+							style=" background-color: rgb(155, 109, 50); border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Turmas</a>
 					</li>
 				</ul>
 			</div>
@@ -45,7 +45,7 @@
 										d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
 								</svg>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="">Perfil</a></li>
+									<li><a class="dropdown-item" href="escolasperfil">Perfil</a></li>
 									<li><a class="dropdown-item" href="/">Sair</a></li>
 								</ul>
 							</li>
@@ -57,82 +57,98 @@
 	</nav>
 
 
-	<section style="height: 700px; width: 100%; background-color: white;">
+	<section class="py-5" style="padding-top: 80px;"> <!-- Ajuste o padding-top para evitar sobreposição -->
+			<div class="container">
+				<div class="row align-items-center">
 
-	</section>
-
-
-	<!-- Footer -->
-	<footer class="text-muted" style="background-color: #D3D3D3; width: 100%; padding-top: 20px; padding-bottom: 20px;">
-		<div class="container">
-			<div class="row text-center text-md-start">
-				<!-- Projeto GIMO -->
-				<div class="col-12 col-md-4 mb-4">
-					<h6 class="text-uppercase fw-bold mb-3">Projeto GIMO Desenvolvido por:</h6>
-					<div class="d-flex flex-column align-items-start">
-						<p class="mb-2">Gisele da Hora Silva</p>
-						<p class="mb-2">Isaac Sena Martins</p>
-						<p class="mb-2">Mateus Albuquerque Pavani</p>
-						<p class="mb-2">Otávio Fidalgo</p>
+					<!-- Texto à esquerda -->
+					<div class="col-md-6">
+						<h2 class="mb-4">Escola</h2>
+						<p>
+              •	Bem-Vindo a área de registro de escolas.
+						</p>
+						<p>
+              •	Aqui poderá ser cadastrada as séries e turmas de cada escola cadastrada no sistema, possibilitando uma melhor compreensão e organização das mesmas, assim podendo ter um maior rendimento nas atividades com os alunos.
+						</p>
+						<p>
+              •	Fique atendo ao criar as series e turmas, sempre colocando o nome das turmas corretamente, e sempre verificando suas séries, para não ter nenhum tipo de conflito na hora das execuções das aulas.
+						</p>
+						
 					</div>
-				</div>
 
-				<!-- Redes Sociais / Link da equipe -->
-				<div class="col-12 col-md-4 mb-4">
-					<h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
-					<div class="flex-column align-items-start text-center">
-						<a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank" class="text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Gisele da Hora
-						</a>
-						<a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank" class="text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Isaac Sena
-						</a>
-						<a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank" class="text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Mateus Pavani
-						</a>
-						<a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank" class="text-decoration-none text-primary mb-2">
-							<i class="fab fa-linkedin me-2"></i>Otávio Fidalgo
-						</a>
+					<!-- Imagem à direita -->
+					<div class="col-md-6 text-center">
+						<img src="{{URL::to('/assets/img/escola.png')}}" alt="Imagem ilustrativa"
+							class="img-fluid rounded">
 					</div>
-				</div>
 
-				<!-- Contato -->
-				<div class="col-12 col-md-4 mb-4">
-					<h6 class="text-uppercase fw-bold mb-3">Contato</h6>
-					<p><i class="fas fa-envelope me-2"></i>gimo.projeto@email.com</p>
-					<p><i class="fas fa-phone me-2"></i>(11) 12345-6789</p>
-					<p><i class="fas fa-map-marker-alt me-2"></i>Senac - SBC, Brasil</p>
 				</div>
 			</div>
-
-			<!-- Redes Sociais - Siga-nos (centralizado) -->
-			<div class="row">
-				<div class="col-12 text-center mt-4">
-					<h6 class="text-uppercase fw-bold mb-3">Redes Sociais</h6>
-					<a href="https://www.linkedin.com" target="_blank" class="me-4 text-reset">
-						<i class="fab fa-linkedin fa-lg"></i>
-					</a>
-					<a href="https://www.instagram.com" target="_blank" class="me-4 text-reset">
-						<i class="fab fa-instagram fa-lg"></i>
-					</a>
-					<a href="https://www.github.com" target="_blank" class="me-4 text-reset">
-						<i class="fab fa-github fa-lg"></i>
-					</a>
-				</div>
-			</div>
-
-			<!-- Direitos Autorais -->
-			<div class="row">
-				<div class="col-12 text-center mt-4">
-					<p class="mb-0">&copy; 2025 Projeto GIMO. Todos os direitos reservados.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
-
-	<!-- FontAwesome (caso ainda não esteja incluído) -->
-	<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		</section>
 
 
+ <!-- Footer centralizado -->
+ <footer class="text-muted" style="background-color: #D3D3D3; width: 100%;">
+    <div class="container py-5">
+      <div class="row text-center justify-content-center">
 
+        <!-- Projeto GIMO -->
+        <div class="col-12 col-md-4 mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Projeto GIMO Desenvolvido por:</h6>
+          <div class="d-flex flex-column align-items-center">
+            <p class="mb-2">Gisele da Hora Silva</p>
+            <p class="mb-2">Isaac Sena Martins</p>
+            <p class="mb-2">Mateus Albuquerque Pavani</p>
+            <p class="mb-2">Otávio Fidalgo</p>
+          </div>
+        </div>
+
+        <!-- LinkedIn centralizado e alinhado -->
+        <div class="col-12 col-md-4 mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">LinkedIn</h6>
+          <div class="d-flex flex-column align-items-center">
+            <a href="https://www.linkedin.com/in/gisele-da-hora-silva-0313811a9/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Gisele da Hora</span>
+            </a>
+            <a href="https://www.linkedin.com/in/isaac-sena-74ab56224/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Isaac Sena</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mateus-albuquerque-pavani-934598267/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Mateus Pavani</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ot%C3%A1vio-fidalgo-8448a1217/" target="_blank"
+              class="text-decoration-none text-primary mb-2 d-flex align-items-center">
+              <i class="fab fa-linkedin me-2"></i><span>Otávio Fidalgo</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contato e Redes Sociais centralizados -->
+        <div class="col-12 col-md-4 mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Contato</h6>
+          <div class="d-flex flex-column align-items-center">
+            <p><i class="fas fa-envelope me-2" style="color: #000;"></i>gimo.projeto@email.com</p>
+            <p><i class="fas fa-map-marker-alt me-2" style="color: #000;"></i>Senac - SBC, Brasil</p>
+            <a href="https://www.instagram.com" target="_blank" class="text-reset d-flex align-items-center">
+              <i class="fab fa-instagram fa-lg me-2" style="color: #000;"></i><span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direitos Autorais -->
+      <div class="row">
+        <div class="col-12 text-center mt-4">
+          <p class="mb-0">&copy; 2025 Projeto GIMO. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FontAwesome (caso ainda não esteja incluído) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
 </x-layout>

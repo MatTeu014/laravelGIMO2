@@ -23,6 +23,7 @@ class escolasController extends Controller{
         // Inserir Dados
         $model = new escolasModel();
         $model->nome = $request->input('nome');
+        $model->email = $request->input('email');
         $model->senha = $request->input('senha');
         $model->endereco = $request->input('endereco');
         $model->telefone = $request->input('telefone');
@@ -35,14 +36,15 @@ class escolasController extends Controller{
 
     public function escolasLogin(Request $request){
 
-        $nome = $request->input('nome');
+        $email = $request->input('email');
         $senha = $request->input('senha');
         
         // Buscar o funcionário pelo nome
      
+        session(['email' => $email]);
         
         // Verificar se o funcionário existe e a senha está correta
-        if ($escolas =escolasModel::where('nome', $nome)->where('senha', $senha)->first()) {
+        if ($escolas =escolasModel::where('email', $email)->where('senha', $senha)->first()) {
     
             // Armazenar os dados do funcionário na sessão
             session(['escolas' => $escolas]);
@@ -53,10 +55,27 @@ class escolasController extends Controller{
 
         } else {
             // Login falhou
-            return redirect('escolaLogin')->with('failed', 'Nome ou senha inválido');
+            return redirect('escolaLogin')->with('failed', 'E-mail ou senha inválido');
         }
     }
 
+    public function escolasPerfil(Request $request){
+
+        
+        $escolas = escolasModel::where('email', session('email'))->first();
+
+        return view('paginas.escolaPerfil', compact('escolas'));
+
+    }
+
+    public function escolasEditarPerfil(Request $request){
+
+        
+        $escolas = escolasModel::where('email', session('email'))->first();
+
+        return view('paginas.escolaPerfil', compact('escolas'));
+
+    }
 
 
 }//fim da classe
