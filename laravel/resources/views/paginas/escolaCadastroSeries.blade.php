@@ -1,59 +1,58 @@
 <x-layout titulo="Cadastro de Séries">
 
-   <nav class="navbar navbar-expand-lg"
-      style="background-color: rgb(119, 81, 31); padding-top: 20px; padding-bottom: 20px;">
-      <div class="container-fluid d-flex justify-content-between align-items-center">
+  <nav class="navbar navbar-expand-lg"
+    style="background-color: rgb(119, 81, 31); padding-top: 20px; padding-bottom: 20px;">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-         <!-- LOGO -->
-         <a class="navbar-brand" href="escolaHome">
-            <img src="{{ URL::to('/assets/img/logo_gimo.png') }}" alt="Logo" style="width: 100px; height: auto;">
-         </a>
+      <!-- LOGO -->
+      <a class="navbar-brand" href="escolaHome">
+        <img src="{{ URL::to('/assets/img/logo_gimo.png') }}" alt="Logo" style="width: 100px; height: auto;">
+      </a>
 
-         <!-- BOTÃO LOGIN -->
-         <form class="d-flex" role="search">
-            <a href="escolaLogin" class="btn"
-               style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color:rgb(155, 109, 50);">LOGIN</a>
-         </form>
+      <!-- BOTÃO LOGIN -->
+      <form class="d-flex" role="search">
+        <a href="escolaLogin" class="btn"
+          style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color:rgb(155, 109, 50);">LOGIN</a>
+      </form>
 
+    </div>
+  </nav>
+
+  <!-- TÍTULO -->
+  <br>
+  <h2 class="card-title" style="text-align: center;">Cadastro de Séries</h2>
+  <br>
+  <!-- criar uma section fora de tudo para arrumar o footer -->
+  <section style="height: 50vh;">
+
+    <div class="card"
+      style="width: 50%; border-color:rgb(155, 109, 50); border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
+      <div class="card-body">
+        @if (session('success'))
+      <div class="alert alert-success" role="alert">
+        {{ session('success') }}
       </div>
-   </nav>
+    @endif
+        @if (session('failed'))
+      <div class="alert alert-danger" role="alert">
+        {{ session('failed') }}
+      </div>
+    @endif
+        <form action="seriescadastrar" method="GET"> <!-- Ajuste o action se necessário -->
 
-   <!-- TÍTULO -->
-   <br>
-   <h2 class="card-title" style="text-align: center;">Cadastro de Séries</h2>
-   <br>
-   <!-- criar uma section fora de tudo para arrumar o footer -->
-   <section style="height: 50vh;">
-
-      <div class="card"
-         style="width: 50%; border-color:rgb(155, 109, 50); border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
-         <div class="card-body">
-            @if (session('success'))
-            <div class="alert alert-success" role="alert">
-               {{ session('success') }}
-            </div>
-         @endif
-            @if (session('failed'))
-            <div class="alert alert-danger" role="alert">
-               {{ session('failed') }}
-            </div>
-         @endif
-            <form action="seriescadastrar" method="GET"> <!-- Ajuste o action se necessário -->
-
-               <!-- Nome -->
-               <h3 style="text-align: center;">Nome da Série:</h3>
-               <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome da série"
-                     required
-                     style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-                  <label for="nome">Nome da Série</label>
-               </div>
-               <br>
-               <br>
+          <!-- Nome -->
+          <h3 style="text-align: center;">Nome da Série:</h3>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome da série" required
+              style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
+            <label for="nome">Nome da Série</label>
+          </div>
+          <br>
+          <br>
 
 
-               <!-- Botão Cadastrar -->
-               <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+          <!-- Botão Cadastrar -->
+          <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
             <a href="escolaHome">
               <button type="button" class="btn btn-primary"
                 style="background-color: white; color:rgb(155, 109, 50); border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 150px;">Voltar</button>
@@ -62,13 +61,13 @@
               style="background-color: white; color:rgb(155, 109, 50); border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 150px;">Confirmar</button>
 
           </div>
-            </form>
-         </div>
+        </form>
       </div>
-   </section>
-   <br>
+    </div>
+  </section>
+  <br>
 
-    <!-- Footer centralizado -->
+  <!-- Footer centralizado -->
   <footer class="text-muted" style="background-color: #D3D3D3; width: 100%;">
     <div class="container py-5">
       <div class="row text-center justify-content-center">

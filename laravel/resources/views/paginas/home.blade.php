@@ -20,11 +20,11 @@
               style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioLogin" class="btn btn-danger"
+            <a href="/alunoLogin" class="btn btn-danger"
               style="border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioLogin" class="btn btn-danger"
+            <a href="/alunoLogin" class="btn btn-danger"
               style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
@@ -39,10 +39,9 @@
             LOGIN
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="usuarioLogin">ALUNO</a></li>
+            <li><a class="dropdown-item" href="alunoLogin">ALUNO</a></li>
             <li><a class="dropdown-item" href="professorLogin">PROFESSOR</a></li>
             <li><a class="dropdown-item" href="escolaLogin">ESCOLA</a></li>
-            <li><a class="dropdown-item" href="admLogin">ADM</a></li>
           </ul>
         </div>
       </form>

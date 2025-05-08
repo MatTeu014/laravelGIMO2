@@ -5,7 +5,7 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
       <!-- LOGO -->
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="escolaHome">
         <img src="{{ URL::to('/assets/img/logo_gimo.png') }}" alt="Logo" style="width: 100px; height: auto;">
       </a>
 
@@ -57,7 +57,7 @@
 
 
           <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
-            <a href="professorHome">
+            <a href="escolaHome">
               <button type="button" class="btn btn-primary"
                 style="background-color: white; color: rgb(255, 119, 77); border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 150px;">Voltar</button>
             </a>

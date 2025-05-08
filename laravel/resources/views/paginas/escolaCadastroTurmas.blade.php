@@ -1,4 +1,4 @@
-<x-layout titulo="Cadastro de Turmas">
+  <x-layout titulo="Cadastro de Turmas">
 
     <nav class="navbar navbar-expand-lg"
         style="background-color:rgb(119, 81, 31); padding-top: 20px; padding-bottom: 20px;">

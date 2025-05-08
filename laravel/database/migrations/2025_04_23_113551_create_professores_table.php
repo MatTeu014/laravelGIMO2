@@ -18,8 +18,6 @@ return new class extends Migration
             $table->longtext('email')->unique();
             $table->longtext('senha');
             $table->integer('idade');
-            $table->integer('idEscolaFK')->unsigned();
-            $table->foreign('idEscolaFK')->references('id')->on('escolas');
             $table->longtext('situacao');
             $table->timestamps();
         });

@@ -61,11 +61,11 @@
 		</div>
 	</nav>
 
-	<form  action="usuarioatualizar" method="POST">
-		@csrf
-		<section class="py-5" style="padding-top: 80px;"> <!-- Ajuste o padding-top para evitar sobreposição -->
-			<div class="container">
-				<div class="row align-items-center">
+	<section class="py-5" style="padding-top: 80px;"> <!-- Ajuste o padding-top para evitar sobreposição -->
+		<div class="container">
+			<div class="row align-items-center">
+				<form action="usuarioatualizar" method="get">
+					@csrf
 
 					<!-- Bloco de Perfil  -->
 					<h2 style="text-align: center;">Editar Perfil de Usuário</h2>
@@ -132,44 +132,6 @@
 									</div>
 								</div>
 
-								<!-- Input escola -->
-								<div class="col-md-6">
-									<h3 style="text-align: center;">Nova Escola:</h3>
-									<div class="form-floating mb-3">
-										<input type="text" class="form-control" id="escola" name="escola"
-											placeholder="Nome da escola"
-											style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;"
-											value="{{ $usuarios->escola }}">
-										<label for="escola">Escola</label>
-									</div>
-								</div>
-
-								<!-- Turma -->
-								<div class="col-md-6">
-									<h3 style="text-align: center;">Nova Turma:</h3>
-									<select class="form-select" id="turma" name="turma"
-										style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-										<option selected disabled>Escolha a nova Turma</option>
-										<option value="Turma 1">Turma 1</option>
-										<option value="Turma 2">Turma 2</option>
-										<option value="Turma 3">Turma 3</option>
-										<option value="Turma 4">Turma 4</option>
-									</select>
-								</div>
-
-								<!-- Select série/ano -->
-								<div class="col-md-6">
-									<h3 style="text-align: center;">Nova Série:</h3>
-									<select class="form-select mb-3" name="serie"
-										style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-										<option selected disabled>Escolha a nova Série</option>
-										<option value="1ª Série">1ª Série</option>
-										<option value="2ª Série">2ª Série</option>
-										<option value="3ª Série">3ª Série</option>
-										<option value="4ª Série">4ª Série</option>
-										<option value="5ª Série">5ª Série</option>
-									</select>
-								</div>
 
 								<!-- Botão Editar -->
 								<div class="col-12 d-flex justify-content-center" style="transform: translate(0px, -0px);">
@@ -178,19 +140,19 @@
 											Voltar
 										</button></a>
 
-									<a><button type="submit" class="btn btn-danger"
-											style="width: 100%; border-radius: 30px; font-size: 18px; padding: 12px 24px; margin-left: 20%; background-color: #E5CD59; border-color: #E5CD59;">
-											Confirmar
-										</button></a>
+									<button type="submit" class="btn btn-danger"
+										style="width: 12%; border-radius: 30px; font-size: 18px; padding: 12px 24px; margin-left: 20%; background-color: #E5CD59; border-color: #E5CD59;">
+										Confirmar
+									</button>
 								</div>
 
 							</div>
 						</div>
 					</div>
-				</div>
+				</form>
 			</div>
-		</section>
-	</form>
+		</div>
+	</section>
 
 
 	<!-- Footer remains unchanged -->

@@ -109,33 +109,6 @@
 								<label for="idade">Idade</label>
 							</div>
 						</div>
-
-						<!-- Input Escola -->
-						<div class="col-md-6">
-							<h3 style="text-align: center;">Escola:</h3>
-							<div class="form-floating mb-3">
-								<input type="text" class="form-control" id="escola" name="escola" placeholder="Nome da escola" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;"  value="{{ $usuarios->escola }}">
-								<label for="escola">Escola</label>
-							</div>
-						</div>
-
-						<!-- Turma -->
-						<div class="col-md-6">
-							<h3 style="text-align: center;">Turma:</h3>
-							<div class="form-floating mb-3">
-								<input type="text" class="form-control" id="turma" name="turma" placeholder="Turma" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;"  value="{{ $usuarios->turma }}">
-								<label for="turma">Turma</label>
-							</div>
-						</div>
-
-						<!-- Input Série -->
-						<div class="col-md-6">
-							<h3 style="text-align: center;">Série/Ano:</h3>
-							<div class="form-floating mb-3">
-								<input type="text" class="form-control" id="serie" name="serie" placeholder="Série" Disabled style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;"  value="{{ $usuarios->serie }}">
-								<label for="serie">Série</label>
-							</div>
-						</div>
 						
 						
 						<!-- Botão Editar -->

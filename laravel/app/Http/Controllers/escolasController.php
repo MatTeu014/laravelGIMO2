@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\escolasModel;
 use App\Models\seriesModel;
 use App\Models\turmasModel;
-use App\Models\usuariosModel;
+use App\Models\alunosModel;
+use Illuminate\Support\Facades\Log;
 
 class escolasController extends Controller{
     
@@ -72,8 +73,37 @@ class escolasController extends Controller{
 
         
         $escolas = escolasModel::where('email', session('email'))->first();
+        
+        return view('paginas.escolaEditarPerfil', compact('escolas'));
+        
+    }
+    
+    public function escolasAtualizarPerfil(Request $request){
+        
+        $escolas = escolasModel::where('email', session('email'))->first();
+        
+        
+        $escolas->update([
+            'nome' => $request->input('nome'),
+            'email' => $request->input('email'),
+            'senha' => $request->input('senha'),
+            'endereco' => $request->input('endereco'),
+            'telefone' => $request->input('telefone')
+        ]);
+        //Log::info(" dadaad $escolas");
+        
+        return redirect('escolasperfil');
 
-        return view('paginas.escolaPerfil', compact('escolas'));
+    }
+
+    public function escolasExcluir(Request $request){
+        
+        $escolas = escolasModel::where('email', session('email'))->first();
+        
+        Log::info(" dada ad $escolas");
+        $escolas->delete();
+        
+        return view('paginas.escolaLogin');
 
     }
 

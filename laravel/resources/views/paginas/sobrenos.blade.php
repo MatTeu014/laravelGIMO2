@@ -20,11 +20,11 @@
                style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioLogin" class="btn btn-danger"
+            <a href="/alunoLogin" class="btn btn-danger"
                style="border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioLogin" class="btn btn-danger"
+            <a href="/alunoLogin" class="btn btn-danger"
                style="border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
@@ -32,7 +32,7 @@
 
       <!-- LOGIN / ADM -->
       <form class="d-flex" role="search">
-        <a href="/usuarioLogin" class="btn" style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; color: #DA3E41;">Login</a>
+        <a href="/alunoLogin" class="btn" style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; color: #DA3E41;">Login</a>
         <a href="/admLogin" class="btn ms-2" style="background-color: white; border-radius: 30px; padding: 6px 18px; font-size: 20px; color: #DA3E41;">Adm</a>
       </form>
     </div>

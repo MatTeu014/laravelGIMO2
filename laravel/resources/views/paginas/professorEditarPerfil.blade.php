@@ -46,13 +46,13 @@
 
       <!-- Bloco de Perfil  -->
       <h2 style="text-align: center;">Editar Perfil do Professor</h2>
-      <div class="card" style="width:100%; border-color: #BDBDBD; border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
+      <div class="card" style="width:100%; border-color: rgb(245, 101, 58); border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
         <div class="card-body">
           <div class="row">
 
             <!-- Input nome -->
             <div class="col-md-6">
-              <h3 style="text-align: center;">Nome:</h3>
+              <h3 style="text-align: center;">Novo Nome:</h3>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->nome }}">
                 <label for="nome">Nome</label>
@@ -61,7 +61,7 @@
 
             <!-- Input sobrenome -->
             <div class="col-md-6">
-              <h3 style="text-align: center;">Sobrenome:</h3>
+              <h3 style="text-align: center;">Novo Sobrenome:</h3>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->sobrenome }}">
                 <label for="sobrenome">Sobrenome</label>
@@ -70,7 +70,7 @@
 
             <!-- Input e-mail -->
             <div class="col-md-6">
-              <h3 style="text-align: center;">E-mail:</h3>
+              <h3 style="text-align: center;">Novo E-mail:</h3>
               <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->email }}">
                 <label for="email">E-mail</label>
@@ -79,7 +79,7 @@
 
             <!-- Input senha -->
             <div class="col-md-6">
-              <h3 style="text-align: center;">Senha:</h3>
+              <h3 style="text-align: center;">Nova Senha:</h3>
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="senha" name="senha" placeholder="Senha" required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->senha }}">
                 <label for="senha">Senha</label>
@@ -88,7 +88,7 @@
 
             <!-- Input idade -->
             <div class="col-md-6">
-              <h3 style="text-align: center;">Idade:</h3>
+              <h3 style="text-align: center;">Nova Idade:</h3>
               <div class="form-floating mb-3">
                 <input type="number" class="form-control" id="idade" name="idade" placeholder="Idade" required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;" value="{{ $professores->idade }}">
                 <label for="idade">Idade</label>
@@ -97,7 +97,7 @@
 
             <!-- Botão Editar -->
             <div class="col-12 d-flex justify-content-center" style="transform: translate(319px, -72px);">
-              <a href="admPerfil"><button type="button"  style="width: 100%; border-radius: 30px; font-size: 18px; padding: 12px 24px;backgorund-color:black;">
+              <a href="professorperfil"><button type="button" style="width: 100%; border-radius: 30px; font-size: 18px; padding: 12px 24px;backgorund-color:black;">
                 Voltar
               </button></a>
               <a href=""><button type="submit"  style="width: 100%; border-radius: 30px; font-size: 18px; padding: 12px 24px; margin-left: 20%;backgorund-color:black;">

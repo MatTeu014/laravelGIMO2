@@ -3,7 +3,7 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
       <!-- LOGO (Imagem responsiva) -->
-      <a class="navbar-brand" href="/usuarioHome">
+      <a class="navbar-brand" href="/alunoHome">
         <img src="{{URL::to('/assets/img/logo_gimo.png')}}" alt="Logo" style="width: 100px; height: auto;">
       </a>
 
@@ -11,16 +11,16 @@
       <div class="d-flex justify-content-center flex-grow-1" style="padding-top:35px;">
         <ul class="navbar-nav d-flex flex-row gap-3">
           <li class="nav-item">
-            <a href="usuarioHome" class="btn btn-danger" style="background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
+            <a href="alunoHome" class="btn btn-danger" style="background-color: #4782DA; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
           </li>
           <li class="nav-item">
-            <a href="usuarioSobrenos" class="btn btn-danger" style="background-color: #4782DA;border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
+            <a href="alunoSobrenos" class="btn btn-danger" style="background-color: #4782DA;border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioAtividades" class="btn btn-danger" style="background-color: #4782DA;border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
+            <a href="/alunoAtividades" class="btn btn-danger" style="background-color: #4782DA;border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('usuariorelatorio') }}" class="btn btn-danger" style="background-color: #4782DA;border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
+            <a href="{{ route('alunosrelatorio') }}" class="btn btn-danger" style="background-color: #4782DA;border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
       </div>
@@ -39,7 +39,7 @@
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                 </svg>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{{ route('usuarioperfil') }}">Perfil</a></li>
+                  <li><a class="dropdown-item" href="{{ route('alunosperfil') }}">Perfil</a></li>
                   <li><a class="dropdown-item" href="/">Sair</a></li>
                 </ul>
               </li>
@@ -51,57 +51,67 @@
   </nav>
 
 
-    <!-- Seção de Conteúdo -->
-      <div class="container" style="height: 800px; width: 800px; border: 2px solid black;">
-              <div class="row align-items-center">
+<!-- Seção de Conteúdo -->
+	<div class="container" style="margin-top: 2%; margin-bottom: 2%; height: 35%; width: 35%; border: 2px solid black;">
+		<div class="row align-items-center">
+			<div  id="carouselExampleDark" class="carousel carousel-dimensions carousel-dark slide" data-bs-wrap="false"> 
 
-              <div  id="carouselExampleDark" class="carousel carousel-dimensions carousel-dark slide" data-bs-wrap="false"> 
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="{{URL::to('/assets/img/letraA.png')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <img src="{{URL::to('/assets/img/letraA_2.png')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{URL::to('/assets/img/letraA_3.png')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{URL::to('/assets/img/letraA_4.png')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{URL::to('/assets/img/letraA_5.png')}}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                        <form method="post" action="{{ route('usuarioaumentarprogressoletraa') }}">
-                         @csrf
-                        <div style="position: relative;">
-                            <img src="{{ URL::to('/assets/img/finalA.png') }}" class="d-block w-100" alt="...">
-                            <button @if(session('usuarios')->botaoA) disabled @endif type="submit" style="background-color: #4782DA;border: 2px solid black;border-radius: 30px;padding: 12px 24px;font-size: 18px;text-align: center;position: absolute;top: 85%;left: 50%;transform: translate(-50%, -50%);">Finalizar</button>
-                        </div>
-                        </form>
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+				</div>
 
-              </div>
-          </div>
+				<div class="carousel-inner">
+
+					<div class="carousel-item active" data-bs-interval="10000">
+						<img src="{{URL::to('/assets/img/letraA.png')}}" class="d-block w-100" alt="...">
+					</div>
+
+					<div class="carousel-item" data-bs-interval="2000">
+						<img src="{{URL::to('/assets/img/letraA_2.png')}}" class="d-block w-100" alt="...">
+					</div>
+
+					<div class="carousel-item">
+						<img src="{{URL::to('/assets/img/letraA_3.png')}}" class="d-block w-100" alt="...">
+					</div>
+
+					<div class="carousel-item">
+						<img src="{{URL::to('/assets/img/letraA_4.png')}}" class="d-block w-100" alt="...">
+					</div>
+
+					<div class="carousel-item">
+						<img src="{{URL::to('/assets/img/letraA_5.png')}}" class="d-block w-100" alt="...">
+					</div>
+
+					<div class="carousel-item">
+						<form method="post" action="{{ route('alunoaumentarprogressoletraa') }}">
+							@csrf
+							<div style="position: relative;">
+								<img src="{{ URL::to('/assets/img/finalA.png') }}" class="d-block w-100" alt="...">
+								<button @if(session('alunos')->botaoA) disabled @endif type="submit" style="background-color: #4782DA;border: 2px solid black;border-radius: 30px;padding: 12px 24px;font-size: 18px;text-align: center;position: absolute;top: 85%;left: 50%;transform: translate(-50%, -50%);">Finalizar</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+
+			</div>
+		</div>
+	</div>
 
   <!-- Footer -->
   <footer class="text-muted" style="background-color: #D3D3D3; width: 100%; padding-top: 20px; padding-bottom: 20px;">

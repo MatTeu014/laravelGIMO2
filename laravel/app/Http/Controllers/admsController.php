@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\admsModel;
+use App\Models\escolasModel;
+use App\Models\professorModel;
+use App\Models\seriesModel;
+use App\Models\turmasModel;
+use App\Models\alunosModel;
+use App\Models\professoresseriesturmasModel;
 
 class admsController extends Controller{
     
@@ -52,8 +58,15 @@ class admsController extends Controller{
             // Armazenar os dados do funcionário na sessão
             session(['adms' => $adms]);
     
-            // Redirecionar para a página homeLogado
-            return redirect('admHome');
+            $escolas = escolasModel::all();
+            $series = seriesModel::all();
+            $turmas = turmasModel::all();
+            $professores = professorModel::all();
+            $professoresseriesturmas = professoresseriesturmasModel::all();
+            $alunos = alunosModel::all();
+
+            
+            return view('paginas.admHome', compact( 'alunos', 'escolas', 'professores', 'series', 'turmas', 'professoresseriesturmas'));
         } else {
             // Login falhou
             return redirect('admLogin')->with('failed', 'E-mail ou senha inválido');
@@ -72,22 +85,22 @@ class admsController extends Controller{
     }
 
     public function admsConsultar(){
-        $ids = usuariosModel::all();
+        $ids = admsModel::all();
         return view('', compact('ids'));
     }//fim do consultar
     
     public function admsEditar($id){
-        $dado = usuariosModel::findOrFail($id);
+        $dado = admsModel::findOrFail($id);
         return view('', compact('dado'));
     }//fim do editar
 
     public function admsAtualizar(Request $request, $id){
-        usuariosModel::where('id',$id)->update($request->all());
+        admsModel::where('id',$id)->update($request->all());
         return redirect('/consultar');
     }//fim do atualizar
 
     public function admsExcluir(Request $request,$id){
-        usuariosModel::where('id',$id)->delete($request->all());
+       //admsModel::where('id',$id)->delete($request->all());
         return redirect('/consultar');
     }
 
@@ -136,5 +149,6 @@ class admsController extends Controller{
         // Redireciona para a página de homeLogado ou outra página que desejar
         return redirect('admsperfil');
     }
+
 
 }//fim da classe

@@ -1,37 +1,39 @@
-<x-layout titulo="Cadastro de Professor">    
+<x-layout titulo="Cadastro de Professor">
 
-  <nav class="navbar navbar-expand-lg" style="background-color: rgb(245, 101, 58); padding-top: 20px; padding-bottom: 20px;">
-      <div class="container-fluid d-flex justify-content-between align-items-center">
+  <nav class="navbar navbar-expand-lg"
+    style="background-color: rgb(245, 101, 58); padding-top: 20px; padding-bottom: 20px;">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-        <!-- LOGO -->
-        <a class="navbar-brand" href="/">
-          <img src="{{ URL::to('/assets/img/logo_gimo.png') }}" alt="Logo" style="width: 100px; height: auto;">
-        </a>
+      <!-- LOGO -->
+      <a class="navbar-brand" href="escolaHome">
+        <img src="{{ URL::to('/assets/img/logo_gimo.png') }}" alt="Logo" style="width: 100px; height: auto;">
+      </a>
 
-        <!-- BOTÃO LOGIN -->
-        <form class="d-flex" role="search">
-          <a href="professorLogin" class="btn" style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color:rgb(245, 140, 109);">LOGIN</a>
-        </form>
+      <!-- BOTÃO LOGIN -->
+      <form class="d-flex" role="search">
+      
+      </form>
 
-      </div>
+    </div>
   </nav>
 
   <!-- TÍTULO -->
   <br>
   <h2 class="card-title" style="text-align: center;">Cadastro de Professor</h2>
   <br>
-  
-  <div class="card" style="width: 50%; border-color: rgb(255, 119, 77); border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
+
+  <div class="card"
+    style="width: 50%; border-color: rgb(255, 119, 77); border-width: 2px; margin: auto; border-radius: 30px; text-align: center;">
     <div class="card-body">
-    @if (session('success'))
-    <div class="alert alert-success" role="alert">
-        {{ session('success') }}
-    </div>
+      @if (session('success'))
+      <div class="alert alert-success" role="alert">
+      {{ session('success') }}
+      </div>
     @endif
-    @if (session('failed'))
-    <div class="alert alert-danger" role="alert">
-        {{ session('failed') }}
-    </div>
+      @if (session('failed'))
+      <div class="alert alert-danger" role="alert">
+      {{ session('failed') }}
+      </div>
     @endif
       <form action="/professorcadastrar" method="GET"> <!-- Ajuste o action se necessário -->
 
@@ -47,12 +49,12 @@
         <!-- Sobrenome -->
         <h3 style="text-align: center;">Sobrenome:</h3>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required
-            style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
+          <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome"
+            required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
           <label for="sobrenome">Sobrenome</label>
         </div>
         <br>
-        
+
         <!-- E-mail -->
         <h3 style="text-align: center;">E-mail:</h3>
         <div class="form-floating mb-3">
@@ -80,31 +82,21 @@
         </div>
         <br>
 
-        <!-- Escola -->
-        <h3 style="text-align: center;">Escola:</h3>
-        <div class="form-floating mb-3">
-          <select name="escola" class="form-select" aria-label="Default select example" required style="border-style: solid; border-color: #000000; border-width: 2px; border-radius: 26px;">
-            <option selected Disabled>Escolha a Escola</option>
-            @foreach($escolas as $escola)
-            <option>{{$escola->nome}}</option>
-            @endforeach
-          </select>
-          <label for="escola">Escola</label>
-        </div>
-        <br>
 
-   
 
         <!-- Botão Cadastrar -->
         <div>
-          <button type="submit" class="btn btn-primary"
-            style="background-color: white; color:rgb(255, 119, 77); border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 20%;">Cadastrar</button>
+          <a href="escolaHome"><button type="button" class="btn btn-primary" style="float: left;background-color: white; color:rgb(255, 119, 77); border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 20%;">Voltar</button></a>
+          <button type="submit" class="btn btn-primary" style="float: right;background-color: white; color:rgb(255, 119, 77); border-color: #000000; border-radius: 30px; border-width: 2px; font-weight: bold; font-size: 17px; width: 20%;">Cadastrar</button>
         </div>
-        <br>
-
-      </form>
+        
     </div>
-   
+
+    <br>
+
+    </form>
+  </div>
+
   </div>
   <br>
 

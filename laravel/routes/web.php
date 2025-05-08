@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admsController;
-use App\Http\Controllers\usuariosController;
+use App\Http\Controllers\alunosController;
 use App\Http\Controllers\escolasController;
 use App\Http\Controllers\seriesController;
 use App\Http\Controllers\turmasController;
@@ -23,53 +23,53 @@ Route::get('sobrenos', function () {
 
 
 
-//Usuario
-Route::get('usuarioLogin', function () {
-    return view('paginas.usuarioLogin');
+//aluno
+Route::get('alunoLogin', function () {
+    return view('paginas.alunoLogin');
 });
 
-Route::get('usuarioCadastro', function () {
-    return view('paginas.usuarioCadastro');
+Route::get('alunoCadastro', function () {
+    return view('paginas.alunoCadastro');
 });
 
-Route::get('usuarioHome', function () {
-    return view('paginas.usuarioHome');
+Route::get('alunoHome', function () {
+    return view('paginas.alunoHome');
 });
 
-Route::get('usuarioPerfil', function () {
-    return view('paginas.usuarioPerfil');
+Route::get('alunoPerfil', function () {
+    return view('paginas.alunoPerfil');
 });
 
-Route::get('usuarioEsqueceuSenha', function () {
-    return view('paginas.usuarioEsqueceuSenha');
+Route::get('alunoEsqueceuSenha', function () {
+    return view('paginas.alunoEsqueceuSenha');
 });
 
-Route::get('usuarioAlterarSenha', function () {
-    return view('paginas.usuarioAlterarSenha');
+Route::get('alunoAlterarSenha', function () {
+    return view('paginas.alunoAlterarSenha');
 });
 
-Route::get('usuarioSobrenos', function () {
-    return view('paginas.usuarioSobrenos');
+Route::get('alunoSobrenos', function () {
+    return view('paginas.alunoSobrenos');
 });
 
-Route::get('usuarioAtividades', function () {
-    return view('paginas.usuarioAtividades');
+Route::get('alunoAtividades', function () {
+    return view('paginas.alunoAtividades');
 });
 
-Route::get('usuarioRelatorio', function () {
-    return view('paginas.usuarioRelatorio');
+Route::get('alunoRelatorio', function () {
+    return view('paginas.alunoRelatorio');
 });
 
-Route::get('usuarioEditarPerfil', function () {
-    return view('paginas.usuarioEditarPerfil');
+Route::get('alunoEditarPerfil', function () {
+    return view('paginas.alunoEditarPerfil');
 });
 
-Route::get('usuarioAlfabeto', function () {
-    return view('paginas.usuarioAlfabeto');
+Route::get('alunoAlfabeto', function () {
+    return view('paginas.alunoAlfabeto');
 });
 
-Route::get('usuarioNumeros', function () {
-    return view('paginas.usuarioNumeros');
+Route::get('alunoNumeros', function () {
+    return view('paginas.alunoNumeros');
 });
 
 
@@ -132,6 +132,9 @@ Route::get('escolaHome', function () {
     return view('paginas.escolaHome');
 });
 
+Route::get('escolaEditarPerfil', function () {
+    return view('paginas.escolaEditarPerfil');
+});
 
 
 //professor
@@ -344,80 +347,76 @@ Route::get('numero10', function () {
 
 
 
-//Funções Usuários
+//Funções Alunos
 
-Route::get('/usuarioscadastrar',[App\Http\Controllers\usuariosController::class, 'usuariosCadastrar'])->name('usuariosCadastrar');
+Route::get('/alunoscadastrar',[App\Http\Controllers\alunosController::class, 'alunosCadastrar'])->name('alunosCadastrar');
 
-Route::get('/usuarioslogin', [App\Http\Controllers\usuariosController::class, 'usuariosLogin'])->name('usuariosLogin');
+Route::get('/alunoslogin', [App\Http\Controllers\alunosController::class, 'alunosLogin'])->name('alunosLogin');
 
-Route::get('/usuarioperfil', [App\Http\Controllers\usuariosController::class, 'usuarioPerfil'])->name('usuarioperfil');
+Route::get('/alunosperfil', [App\Http\Controllers\alunosController::class, 'alunosPerfil'])->name('alunosperfil');
 
-Route::get('/usuarioeditar', [App\Http\Controllers\usuariosController::class, 'usuarioEditar'])->name('usuarioeditar');
+Route::get('/alunoseditar', [App\Http\Controllers\alunosController::class, 'alunosEditar'])->name('alunoseditar');
 
-Route::post('/usuarioatualizar', [App\Http\Controllers\usuariosController::class, 'usuarioAtualizar'])->name('usuarioatualizar');
+Route::get('/alunosatualizar', [App\Http\Controllers\alunosController::class, 'alunosAtualizar'])->name('alunosatualizar');
 
-Route::post('/usuarioaumentarprogressonumeros', [usuariosController::class, 'usuarioAumentarProgressoNumeros'])->name('usuarioaumentarprogressonumeros');
+Route::get('/alunosrelatorio', [App\Http\Controllers\alunosController::class, 'alunosRelatorio'])->name('alunosrelatorio');
 
-Route::get('/usuariorelatorio', [App\Http\Controllers\usuariosController::class, 'usuarioRelatorio'])->name('usuariorelatorio');
+Route::get('/alunosconsultarescola',[App\Http\Controllers\alunosController::class, 'alunosConsultarEscola'])->name('alunosconsultarescola');
 
-Route::get('/usuariosconsultarescola',[App\Http\Controllers\usuariosController::class, 'usuariosConsultarEscola'])->name('usuariosconsultarescola');
+Route::get('/alunoscadastrarserie',[App\Http\Controllers\alunosController::class, 'alunosCadastrarSerie'])->name('alunoscadastrarserie');
 
-Route::get('/usuarioscadastrarserie',[App\Http\Controllers\usuariosController::class, 'usuariosCadastrarSerie'])->name('usuarioscadastrarserie');
-
-Route::get('/usuarioscadastrarturma',[App\Http\Controllers\usuariosController::class, 'usuariosCadastrarTurma'])->name('usuarioscadastrarturma');
+Route::get('/alunoscadastrarturma',[App\Http\Controllers\alunosController::class, 'alunosCadastrarTurma'])->name('alunoscadastrarturma');
 
 
 #######BOTOES DO ALFABETO########
 
-Route::post('/usuarioaumentarprogressoletraa', [usuariosController::class, 'usuarioAumentarProgressoLetraA'])->name('usuarioaumentarprogressoletraa');
-Route::post('/usuarioaumentarprogressoletrab', [usuariosController::class, 'usuarioAumentarProgressoLetraB'])->name('usuarioaumentarprogressoletrab');
-Route::post('/usuarioaumentarprogressoletrac', [usuariosController::class, 'usuarioAumentarProgressoLetraC'])->name('usuarioaumentarprogressoletrac');
-Route::post('/usuarioaumentarprogressoletrad', [usuariosController::class, 'usuarioAumentarProgressoLetraD'])->name('usuarioaumentarprogressoletrad');
-Route::post('/usuarioaumentarprogressoletrae', [usuariosController::class, 'usuarioAumentarProgressoLetraE'])->name('usuarioaumentarprogressoletrae');
-Route::post('/usuarioaumentarprogressoletraf', [usuariosController::class, 'usuarioAumentarProgressoLetraF'])->name('usuarioaumentarprogressoletraf');
-Route::post('/usuarioaumentarprogressoletrag', [usuariosController::class, 'usuarioAumentarProgressoLetraG'])->name('usuarioaumentarprogressoletrag');
-Route::post('/usuarioaumentarprogressoletrah', [usuariosController::class, 'usuarioAumentarProgressoLetraH'])->name('usuarioaumentarprogressoletrah');
-Route::post('/usuarioaumentarprogressoletrai', [usuariosController::class, 'usuarioAumentarProgressoLetraI'])->name('usuarioaumentarprogressoletrai');
-Route::post('/usuarioaumentarprogressoletraj', [usuariosController::class, 'usuarioAumentarProgressoLetraJ'])->name('usuarioaumentarprogressoletraj');
-Route::post('/usuarioaumentarprogressoletrak', [usuariosController::class, 'usuarioAumentarProgressoLetraK'])->name('usuarioaumentarprogressoletrak');
-Route::post('/usuarioaumentarprogressoletral', [usuariosController::class, 'usuarioAumentarProgressoLetraL'])->name('usuarioaumentarprogressoletral');
-Route::post('/usuarioaumentarprogressoletram', [usuariosController::class, 'usuarioAumentarProgressoLetraM'])->name('usuarioaumentarprogressoletram');
-Route::post('/usuarioaumentarprogressoletran', [usuariosController::class, 'usuarioAumentarProgressoLetraN'])->name('usuarioaumentarprogressoletran');
-Route::post('/usuarioaumentarprogressoletrao', [usuariosController::class, 'usuarioAumentarProgressoLetraO'])->name('usuarioaumentarprogressoletrao');
-Route::post('/usuarioaumentarprogressoletrap', [usuariosController::class, 'usuarioAumentarProgressoLetraP'])->name('usuarioaumentarprogressoletrap');
-Route::post('/usuarioaumentarprogressoletraq', [usuariosController::class, 'usuarioAumentarProgressoLetraQ'])->name('usuarioaumentarprogressoletraq');
-Route::post('/usuarioaumentarprogressoletrar', [usuariosController::class, 'usuarioAumentarProgressoLetraR'])->name('usuarioaumentarprogressoletrar');
-Route::post('/usuarioaumentarprogressoletras', [usuariosController::class, 'usuarioAumentarProgressoLetraS'])->name('usuarioaumentarprogressoletras');
-Route::post('/usuarioaumentarprogressoletrat', [usuariosController::class, 'usuarioAumentarProgressoLetraT'])->name('usuarioaumentarprogressoletrat');
-Route::post('/usuarioaumentarprogressoletrau', [usuariosController::class, 'usuarioAumentarProgressoLetraU'])->name('usuarioaumentarprogressoletrau');
-Route::post('/usuarioaumentarprogressoletrav', [usuariosController::class, 'usuarioAumentarProgressoLetraV'])->name('usuarioaumentarprogressoletrav');
-Route::post('/usuarioaumentarprogressoletraw', [usuariosController::class, 'usuarioAumentarProgressoLetraW'])->name('usuarioaumentarprogressoletraw');
-Route::post('/usuarioaumentarprogressoletrax', [usuariosController::class, 'usuarioAumentarProgressoLetraX'])->name('usuarioaumentarprogressoletrax');
-Route::post('/usuarioaumentarprogressoletray', [usuariosController::class, 'usuarioAumentarProgressoLetraY'])->name('usuarioaumentarprogressoletray');
-Route::post('/usuarioaumentarprogressoletraz', [usuariosController::class, 'usuarioAumentarProgressoLetraZ'])->name('usuarioaumentarprogressoletraz');
+Route::post('/alunoaumentarprogressoletraa', [alunosController::class, 'alunoAumentarProgressoLetraA'])->name('alunoaumentarprogressoletraa');
+Route::post('/alunoaumentarprogressoletrab', [alunosController::class, 'alunoAumentarProgressoLetraB'])->name('alunoaumentarprogressoletrab');
+Route::post('/alunoaumentarprogressoletrac', [alunosController::class, 'alunoAumentarProgressoLetraC'])->name('alunoaumentarprogressoletrac');
+Route::post('/alunoaumentarprogressoletrad', [alunosController::class, 'alunoAumentarProgressoLetraD'])->name('alunoaumentarprogressoletrad');
+Route::post('/alunoaumentarprogressoletrae', [alunosController::class, 'alunoAumentarProgressoLetraE'])->name('alunoaumentarprogressoletrae');
+Route::post('/alunoaumentarprogressoletraf', [alunosController::class, 'alunoAumentarProgressoLetraF'])->name('alunoaumentarprogressoletraf');
+Route::post('/alunoaumentarprogressoletrag', [alunosController::class, 'alunoAumentarProgressoLetraG'])->name('alunoaumentarprogressoletrag');
+Route::post('/alunoaumentarprogressoletrah', [alunosController::class, 'alunoAumentarProgressoLetraH'])->name('alunoaumentarprogressoletrah');
+Route::post('/alunoaumentarprogressoletrai', [alunosController::class, 'alunoAumentarProgressoLetraI'])->name('alunoaumentarprogressoletrai');
+Route::post('/alunoaumentarprogressoletraj', [alunosController::class, 'alunoAumentarProgressoLetraJ'])->name('alunoaumentarprogressoletraj');
+Route::post('/alunoaumentarprogressoletrak', [alunosController::class, 'alunoAumentarProgressoLetraK'])->name('alunoaumentarprogressoletrak');
+Route::post('/alunoaumentarprogressoletral', [alunosController::class, 'alunoAumentarProgressoLetraL'])->name('alunoaumentarprogressoletral');
+Route::post('/alunoaumentarprogressoletram', [alunosController::class, 'alunoAumentarProgressoLetraM'])->name('alunoaumentarprogressoletram');
+Route::post('/alunoaumentarprogressoletran', [alunosController::class, 'alunoAumentarProgressoLetraN'])->name('alunoaumentarprogressoletran');
+Route::post('/alunoaumentarprogressoletrao', [alunosController::class, 'alunoAumentarProgressoLetraO'])->name('alunoaumentarprogressoletrao');
+Route::post('/alunoaumentarprogressoletrap', [alunosController::class, 'alunoAumentarProgressoLetraP'])->name('alunoaumentarprogressoletrap');
+Route::post('/alunoaumentarprogressoletraq', [alunosController::class, 'alunoAumentarProgressoLetraQ'])->name('alunoaumentarprogressoletraq');
+Route::post('/alunoaumentarprogressoletrar', [alunosController::class, 'alunoAumentarProgressoLetraR'])->name('alunoaumentarprogressoletrar');
+Route::post('/alunoaumentarprogressoletras', [alunosController::class, 'alunoAumentarProgressoLetraS'])->name('alunoaumentarprogressoletras');
+Route::post('/alunoaumentarprogressoletrat', [alunosController::class, 'alunoAumentarProgressoLetraT'])->name('alunoaumentarprogressoletrat');
+Route::post('/alunoaumentarprogressoletrau', [alunosController::class, 'alunoAumentarProgressoLetraU'])->name('alunoaumentarprogressoletrau');
+Route::post('/alunoaumentarprogressoletrav', [alunosController::class, 'alunoAumentarProgressoLetraV'])->name('alunoaumentarprogressoletrav');
+Route::post('/alunoaumentarprogressoletraw', [alunosController::class, 'alunoAumentarProgressoLetraW'])->name('alunoaumentarprogressoletraw');
+Route::post('/alunoaumentarprogressoletrax', [alunosController::class, 'alunoAumentarProgressoLetraX'])->name('alunoaumentarprogressoletrax');
+Route::post('/alunoaumentarprogressoletray', [alunosController::class, 'alunoAumentarProgressoLetraY'])->name('alunoaumentarprogressoletray');
+Route::post('/alunoaumentarprogressoletraz', [alunosController::class, 'alunoAumentarProgressoLetraZ'])->name('alunoaumentarprogressoletraz');
 
-Route::post('/usuarioresetarprogressoletras', [usuariosController::class, 'usuarioResetarProgressoLetras'])->name('usuarioresetarprogressoletras');
+Route::post('/alunoresetarprogressoletras', [alunosController::class, 'alunoResetarProgressoLetras'])->name('alunoresetarprogressoletras');
 
 #######BOTOES DO ALFABETO########
 
 
 #######BOTOES DOS NUMEROS########
 
-Route::post('/usuarioaumentarprogressonumero0', [usuariosController::class, 'usuarioAumentarProgressoNumero0'])->name('usuarioaumentarprogressonumero0');
-Route::post('/usuarioaumentarprogressonumero1', [usuariosController::class, 'usuarioAumentarProgressoNumero1'])->name('usuarioaumentarprogressonumero1');
-Route::post('/usuarioaumentarprogressonumero2', [usuariosController::class, 'usuarioAumentarProgressoNumero2'])->name('usuarioaumentarprogressonumero2');
-Route::post('/usuarioaumentarprogressonumero3', [usuariosController::class, 'usuarioAumentarProgressoNumero3'])->name('usuarioaumentarprogressonumero3');
-Route::post('/usuarioaumentarprogressonumero4', [usuariosController::class, 'usuarioAumentarProgressoNumero4'])->name('usuarioaumentarprogressonumero4');
-Route::post('/usuarioaumentarprogressonumero5', [usuariosController::class, 'usuarioAumentarProgressoNumero5'])->name('usuarioaumentarprogressonumero5');
-Route::post('/usuarioaumentarprogressonumero6', [usuariosController::class, 'usuarioAumentarProgressoNumero6'])->name('usuarioaumentarprogressonumero6');
-Route::post('/usuarioaumentarprogressonumero7', [usuariosController::class, 'usuarioAumentarProgressoNumero7'])->name('usuarioaumentarprogressonumero7');
-Route::post('/usuarioaumentarprogressonumero8', [usuariosController::class, 'usuarioAumentarProgressoNumero8'])->name('usuarioaumentarprogressonumero8');
-Route::post('/usuarioaumentarprogressonumero9', [usuariosController::class, 'usuarioAumentarProgressoNumero9'])->name('usuarioaumentarprogressonumero9');
-Route::post('/usuarioaumentarprogressonumero10', [usuariosController::class, 'usuarioAumentarProgressoNumero10'])->name('usuarioaumentarprogressonumero10');
+Route::post('/alunoaumentarprogressonumero0', [alunosController::class, 'alunoAumentarProgressoNumero0'])->name('alunoaumentarprogressonumero0');
+Route::post('/alunoaumentarprogressonumero1', [alunosController::class, 'alunoAumentarProgressoNumero1'])->name('alunoaumentarprogressonumero1');
+Route::post('/alunoaumentarprogressonumero2', [alunosController::class, 'alunoAumentarProgressoNumero2'])->name('alunoaumentarprogressonumero2');
+Route::post('/alunoaumentarprogressonumero3', [alunosController::class, 'alunoAumentarProgressoNumero3'])->name('alunoaumentarprogressonumero3');
+Route::post('/alunoaumentarprogressonumero4', [alunosController::class, 'alunoAumentarProgressoNumero4'])->name('alunoaumentarprogressonumero4');
+Route::post('/alunoaumentarprogressonumero5', [alunosController::class, 'alunoAumentarProgressoNumero5'])->name('alunoaumentarprogressonumero5');
+Route::post('/alunoaumentarprogressonumero6', [alunosController::class, 'alunoAumentarProgressoNumero6'])->name('alunoaumentarprogressonumero6');
+Route::post('/alunoaumentarprogressonumero7', [alunosController::class, 'alunoAumentarProgressoNumero7'])->name('alunoaumentarprogressonumero7');
+Route::post('/alunoaumentarprogressonumero8', [alunosController::class, 'alunoAumentarProgressoNumero8'])->name('alunoaumentarprogressonumero8');
+Route::post('/alunoaumentarprogressonumero9', [alunosController::class, 'alunoAumentarProgressoNumero9'])->name('alunoaumentarprogressonumero9');
+Route::post('/alunoaumentarprogressonumero10', [alunosController::class, 'alunoAumentarProgressoNumero10'])->name('alunoaumentarprogressonumero10');
 
-
-
-Route::post('/usuarioresetarprogressonumeros', [usuariosController::class, 'usuarioResetarProgressoNumeros'])->name('usuarioresetarprogressonumeros');
+Route::post('/alunoresetarprogressonumeros', [alunosController::class, 'alunoResetarProgressoNumeros'])->name('alunoresetarprogressonumeros');
 
 #######BOTOES DOS NUMEROS########
 
@@ -456,6 +455,9 @@ Route::get('/professorconsultarseries',[App\Http\Controllers\professorController
 
 Route::get('/professorconsultarturmas',[App\Http\Controllers\professorController::class, 'professorConsultarTurmas'])->name('professorconsultarturmas');
 
+Route::get('/professorrelatoriosalunos',[App\Http\Controllers\professorController::class, 'professorRelatoriosAlunos'])->name('professorrelatoriosalunos');
+
+
 
 //Funções Escolas
 
@@ -464,6 +466,11 @@ Route::get('/escolascadastrar',[App\Http\Controllers\escolasController::class, '
 Route::get('/escolaslogin',[App\Http\Controllers\escolasController::class, 'escolasLogin'])->name('escolaslogin');
 
 Route::get('/escolasperfil',[App\Http\Controllers\escolasController::class, 'escolasPerfil'])->name('escolasperfil');
+
+Route::get('/escolaseditarperfil',[App\Http\Controllers\escolasController::class, 'escolaseditarperfil'])->name('escolaseditarperfil');
+
+Route::get('/escolasatualizarperfil',[App\Http\Controllers\escolasController::class, 'escolasAtualizarPerfil'])->name('escolasatualizarperfil');
+
 
 
 ///Funções Series
@@ -480,6 +487,7 @@ Route::get('/turmascadastrar',[App\Http\Controllers\turmasController::class, 'tu
 
 //ProfessorSeriesTurmas
 
+Route::get('/professorconsultarprofessores',[App\Http\Controllers\professoresseriesturmasController::class, 'professorConsultarProfessores'])->name('professorconsultarprofessores');
 
 Route::get('/professoresseriesturmascadastrarserie',[App\Http\Controllers\professoresseriesturmasController::class, 'professoresseriesturmasCadastrarSerie'])->name('professoresseriesturmascadastrarserie');
 

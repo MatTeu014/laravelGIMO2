@@ -9,7 +9,7 @@ class professoresseriesturmasModel extends Model
 {
     //Defino o banco de dados que será usado
     use HasFactory;
-    protected $table = 'profressoresseriesturmas'; //Nome da Tabela
+    protected $table = 'professoresseriesturmas'; //Nome da Tabela
     
     protected $fillable = ['idProfessorFK','idSerieFK','idTurmaFK'];
     

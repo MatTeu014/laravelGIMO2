@@ -10,7 +10,7 @@
 
         <!-- BOTÃO LOGIN -->
         <form class="d-flex" role="search">
-          <a href="usuarioLogin" class="btn" style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #E5CD59;">LOGIN</a>
+          <a href="alunoLogin" class="btn" style="background-color: white; border-radius: 30px; padding: 6px 17px; font-size: 19px; width: 100px; text-align: center; color: #E5CD59;">LOGIN</a>
         </form>
 
       </div>
@@ -33,7 +33,7 @@
         {{ session('failed') }}
     </div>
     @endif
-      <form action="/usuarioscadastrar" method="GET"> <!-- Ajuste o action se necessário -->
+      <form action="/alunoscadastrar" method="GET"> <!-- Ajuste o action se necessário -->
 
         <!-- Nome -->
         <h3 style="text-align: center;">Nome da Turma:</h3>

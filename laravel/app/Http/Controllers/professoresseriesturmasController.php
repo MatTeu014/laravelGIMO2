@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\professorModel;
 use Illuminate\Http\Request;
-use App\Models\usuariosModel;
+use App\Models\alunosModel;
 use App\Models\escolasModel;
 use App\Models\seriesModel;
 use App\Models\turmasModel;
@@ -25,6 +25,14 @@ class professoresseriesturmasController extends Controller
         return view('paginas.professorCadastroTurmas', compact('turmas'));
     }
 
+    public function professorConsultarProfessores(Request $request){
+        
+        $professores = professorModel::get();
+
+        return view('paginas.escolaCadastroProfessorSerieTurma', compact('professores'));
+
+    }
+
     public function professoresseriesturmaCadastrarTurma(Request $request){
 
         $idserie = session('idserie');
@@ -37,7 +45,7 @@ class professoresseriesturmasController extends Controller
         $model->idTurmaFK = $idturma;
         $model->save();
 
-        return view('paginas.professorHome');
+        return view('paginas.escolaHome');
 
     }
 
@@ -56,6 +64,7 @@ class professoresseriesturmasController extends Controller
 
     }
 
+    
     public function professoresseriesturmaConsultaTurma(Request $request){
 
         $idprofessor = session('idprofessor');
@@ -83,7 +92,7 @@ class professoresseriesturmasController extends Controller
         $serie = session('serie');
         $turma = $request->input('turma');
 
-        $alunos = usuariosModel::where('escola', $escola)->where('idSerieFK', $serie)->where('idTurmaFK', $turma)->get();
+        $alunos = alunosModel::where('idSerieFK', $serie)->where('idTurmaFK', $turma)->get();
 
         Log::info(" dadaad $escola, $serie, $turma");
 

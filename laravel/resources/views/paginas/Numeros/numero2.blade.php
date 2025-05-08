@@ -3,7 +3,7 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
       <!-- LOGO (Imagem responsiva) -->
-      <a class="navbar-brand" href="/usuarioHome">
+      <a class="navbar-brand" href="/alunoHome">
         <img src="{{URL::to('/assets/img/logo_gimo.png')}}" alt="Logo" style="width: 100px; height: auto;">
       </a>
 
@@ -11,16 +11,16 @@
       <div class="d-flex justify-content-center flex-grow-1" style="padding-top:35px;">
         <ul class="navbar-nav d-flex flex-row gap-3">
           <li class="nav-item">
-            <a href="usuarioHome" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
+            <a href="alunoHome" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Home</a>
           </li>
           <li class="nav-item">
-            <a href="usuarioSobrenos" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
+            <a href="alunoSobrenos" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Sobre</a>
           </li>
           <li class="nav-item">
-            <a href="/usuarioAtividades" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
+            <a href="/alunoAtividades" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 10px; font-size: 18px; width: 120px; text-align: center;">Atividades</a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('usuariorelatorio') }}" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
+            <a href="{{ route('alunosrelatorio') }}" class="btn btn-danger" style="background-color: #34B764; border: 2px solid black; border-radius: 30px; padding: 12px 24px; font-size: 18px; width: 120px; text-align: center;">Relatório</a>
           </li>
         </ul>
       </div>
@@ -39,7 +39,7 @@
                   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
                 </svg>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{{ route('usuarioperfil') }}">Perfil</a></li>
+                  <li><a class="dropdown-item" href="{{ route('alunosperfil') }}">Perfil</a></li>
                   <li><a class="dropdown-item" href="/">Sair</a></li>
                 </ul>
               </li>
@@ -52,7 +52,7 @@
 
     <!-- Seção de Conteúdo -->
 
-        <div class="container" style="height: 800px; width: 800px; border: 2px solid black;">
+    <div class="container" style="margin-top: 2%; margin-bottom: 2%; height: 35%; width: 35%; border: 2px solid black;">
             <div class="row align-items-center">
 
             <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-dimensions" data-bs-wrap="false">
@@ -77,11 +77,11 @@
             <img src="{{URL::to('/assets/img/num2_4.png')}}" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-        <form method="post" action="{{ route('usuarioaumentarprogressonumero2') }}">
+        <form method="post" action="{{ route('alunoaumentarprogressonumero2') }}">
         @csrf
         <div style="position: relative;">
             <img src="{{ URL::to('/assets/img/final2.png') }}" class="d-block w-100" alt="...">
-            <button @if(session('usuarios')->botao2) disabled @endif type="submit" style="
+            <button @if(session('alunos')->botao2) disabled @endif type="submit" style="
                 background-color: #34B764;
                 border: 2px solid black;
                 border-radius: 30px;
